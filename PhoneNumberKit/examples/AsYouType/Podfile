@@ -1,0 +1,14 @@
+platform :ios, '8.0'
+
+target 'Sample' do
+  use_frameworks!
+
+  # Pods for Sample
+  pod 'PhoneNumberKit', :path => '../..'
+
+  target 'SampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
