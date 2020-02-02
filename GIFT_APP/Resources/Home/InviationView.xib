@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nmD-hG-dtu" userLabel="Invitation View" customClass="InviationView" customModule="GIFT_APP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="284"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcJ-Re-HUB" userLabel="Background view">
+                    <rect key="frame" x="20" y="44" width="394" height="206"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="700" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-Vh-EEm" userLabel="Content view">
+                            <rect key="frame" x="20" y="20" width="354" height="166"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Invitation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QS7-E5-6Dk">
+                                    <rect key="frame" x="122" y="0.0" width="110" height="27.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Please type the invitation price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTQ-xE-vZr">
+                                    <rect key="frame" x="60" y="37.5" width="234.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$250" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y89-zk-2HI">
+                                    <rect key="frame" x="0.0" y="68" width="354" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="8qm-3D-6l4"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uh7-jF-Y1G">
+                                    <rect key="frame" x="0.0" y="118" width="354" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2B-Nd-a1M" customClass="MDCFloatingButton">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="aqO-YL-fsX"/>
+                                            </constraints>
+                                            <state key="normal" title="Inviate">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnClick_Invite:" destination="nmD-hG-dtu" eventType="touchUpInside" id="Aqr-jp-G5k"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGX-Qh-1ge" customClass="MDCFloatingButton">
+                                            <rect key="frame" x="187" y="0.0" width="167" height="48"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="gp5-sc-1yd"/>
+                                            </constraints>
+                                            <state key="normal" title="cancel">
+                                                <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnClick_Cancel:" destination="nmD-hG-dtu" eventType="touchUpInside" id="O34-Lt-9p3"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="uh7-jF-Y1G" firstAttribute="leading" secondItem="Lfq-Vh-EEm" secondAttribute="leading" id="AGD-gr-bfq"/>
+                                <constraint firstAttribute="trailing" secondItem="uh7-jF-Y1G" secondAttribute="trailing" id="JKz-Qd-r2j"/>
+                                <constraint firstAttribute="trailing" secondItem="Y89-zk-2HI" secondAttribute="trailing" id="N45-M7-WL4"/>
+                                <constraint firstItem="Y89-zk-2HI" firstAttribute="leading" secondItem="Lfq-Vh-EEm" secondAttribute="leading" id="upT-gi-Zet"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Lfq-Vh-EEm" firstAttribute="top" secondItem="BcJ-Re-HUB" secondAttribute="top" constant="20" id="2Rq-Ao-hZL">
+                            <variation key="widthClass=regular" constant="30"/>
+                        </constraint>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" priority="900" constant="500" id="Csy-aR-6rB"/>
+                        <constraint firstAttribute="bottom" secondItem="Lfq-Vh-EEm" secondAttribute="bottom" constant="20" id="PhU-Px-jaE">
+                            <variation key="widthClass=regular" constant="30"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="Lfq-Vh-EEm" secondAttribute="trailing" constant="20" id="RUf-4E-A8P">
+                            <variation key="widthClass=regular" constant="30"/>
+                        </constraint>
+                        <constraint firstItem="Lfq-Vh-EEm" firstAttribute="leading" secondItem="BcJ-Re-HUB" secondAttribute="leading" constant="20" id="jFC-oU-1DG">
+                            <variation key="widthClass=regular" constant="30"/>
+                        </constraint>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Csy-aR-6rB"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=regular">
+                        <mask key="constraints">
+                            <exclude reference="Csy-aR-6rB"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BcJ-Re-HUB" firstAttribute="top" secondItem="nmD-hG-dtu" secondAttribute="topMargin" id="AoR-cG-0AN"/>
+                <constraint firstItem="BcJ-Re-HUB" firstAttribute="leading" secondItem="nmD-hG-dtu" secondAttribute="leadingMargin" priority="900" id="CYq-vj-jP3"/>
+                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="BcJ-Re-HUB" secondAttribute="trailing" priority="900" id="L30-Ly-K4z"/>
+                <constraint firstItem="BcJ-Re-HUB" firstAttribute="centerX" secondItem="nmD-hG-dtu" secondAttribute="centerX" priority="950" id="LGg-en-0HG"/>
+                <constraint firstAttribute="trailingMargin" secondItem="BcJ-Re-HUB" secondAttribute="trailing" priority="900" id="TZO-GE-A7K"/>
+                <constraint firstItem="BcJ-Re-HUB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nmD-hG-dtu" secondAttribute="leadingMargin" priority="900" id="U3N-qa-0sy"/>
+                <constraint firstAttribute="bottomMargin" secondItem="BcJ-Re-HUB" secondAttribute="bottom" id="aLR-57-3h1"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="iYQ-rX-Jo0"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="bounceAnimationOffset">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="topLayoutMarginAddition">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="leftLayoutMarginAddition">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="bottomLayoutMarginAddition">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="rightLayoutMarginAddition">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="collapseLayoutMarginAdditions" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="U3N-qa-0sy"/>
+                    <exclude reference="L30-Ly-K4z"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="CYq-vj-jP3"/>
+                    <include reference="U3N-qa-0sy"/>
+                    <exclude reference="TZO-GE-A7K"/>
+                    <include reference="L30-Ly-K4z"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="backgroundView" destination="BcJ-Re-HUB" id="9gJ-qn-Xqy"/>
+            </connections>
+            <point key="canvasLocation" x="213.04347826086959" y="358.25892857142856"/>
+        </view>
+    </objects>
+</document>
