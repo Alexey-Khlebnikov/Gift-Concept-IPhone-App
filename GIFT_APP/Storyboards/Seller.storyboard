@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -724,7 +725,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-Rz-WWs">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="TMy-Gu-rVD">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="TMy-Gu-rVD">
                                     <size key="itemSize" width="414" height="201"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -734,7 +735,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerBuyRequestsViewCell" id="uQp-de-6WB" customClass="SellerBuyRequestsViewCell" customModule="GIFT_APP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q1i-MF-8zC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -743,6 +744,9 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I need a small watch" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R6-aE-lwd">
                                                             <rect key="frame" x="20" y="30" width="374" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="VUO-Dv-JN8"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -767,6 +771,9 @@ I just wanted you know what I’m doing now to </string>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIC-pT-2vt">
                                                             <rect key="frame" x="20" y="122" width="38" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="17" id="d4Z-kQ-7vw"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -839,6 +846,9 @@ I just wanted you know what I’m doing now to </string>
                                                                     <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="action_Accept:" destination="uQp-de-6WB" eventType="touchUpInside" id="qHt-6D-KfI"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opened" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK5-Rk-dXw">
                                                             <rect key="frame" x="331" y="158.5" width="63" height="21"/>
@@ -880,14 +890,13 @@ I just wanted you know what I’m doing now to </string>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="dF5-gU-xdo" secondAttribute="bottom" id="7Rk-zt-oZS"/>
-                                            <constraint firstAttribute="trailing" secondItem="dF5-gU-xdo" secondAttribute="trailing" id="KrD-CJ-g1L"/>
-                                            <constraint firstItem="dF5-gU-xdo" firstAttribute="leading" secondItem="uQp-de-6WB" secondAttribute="leading" id="LYh-f1-qJW"/>
-                                            <constraint firstItem="dF5-gU-xdo" firstAttribute="top" secondItem="uQp-de-6WB" secondAttribute="top" id="hvj-BB-3hL"/>
-                                        </constraints>
-                                        <size key="customSize" width="414" height="201"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="dF5-gU-xdo" secondAttribute="bottom" id="7Rk-zt-oZS"/>
+                                                <constraint firstAttribute="trailing" secondItem="dF5-gU-xdo" secondAttribute="trailing" id="KrD-CJ-g1L"/>
+                                                <constraint firstItem="dF5-gU-xdo" firstAttribute="leading" secondItem="Q1i-MF-8zC" secondAttribute="leading" id="LYh-f1-qJW"/>
+                                                <constraint firstItem="dF5-gU-xdo" firstAttribute="top" secondItem="Q1i-MF-8zC" secondAttribute="top" id="hvj-BB-3hL"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="btn_accept" destination="jXU-ix-rHY" id="ORc-lS-86C"/>
                                             <outlet property="lbl_bidPrice" destination="anC-WU-Zkf" id="z5a-qU-GYR"/>

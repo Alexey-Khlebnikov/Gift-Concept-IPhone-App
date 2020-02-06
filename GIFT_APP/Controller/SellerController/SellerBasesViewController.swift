@@ -85,6 +85,7 @@ extension SellerBasesViewController: MDCBottomNavigationBarDelegate {
         scrollToMenuIndex(index: item.tag)
         setNavigationBar(index:  item.tag)
         Global.selectMenu(index: item.tag)
+        setTitle(item.title)
     }
     
     func bottomNavigationBar(_ bottomNavigationBar: MDCBottomNavigationBar, shouldSelect item: UITabBarItem) -> Bool {

@@ -16,8 +16,15 @@ class BidData: SafeJsonObject {
     var product: Product?
     var productId: String = ""
     var bidPrice: Float = 0.0
+    var priceUnit: PriceUnit = PriceUnit()
     var state: String = "Open"
     var createdAt: String = ""
+    
+    var fullPrice: String {
+        get {
+            return String.currencyFormat(price: bidPrice, unit: priceUnit.symbol, decimal: 2)
+        }
+    }
     
     
     func create(complete: @escaping (BidData) -> ()) {
@@ -86,6 +93,9 @@ class BidData: SafeJsonObject {
             break
         case "post":
             self.post = Post(value as! [String: AnyObject])
+            break
+        case "priceUnit":
+            self.priceUnit = PriceUnit(value as! [String: AnyObject])
             break
         default:
             super.setValue(value, forKey: key)

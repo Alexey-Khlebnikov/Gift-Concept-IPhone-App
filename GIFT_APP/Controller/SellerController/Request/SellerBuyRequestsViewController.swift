@@ -31,6 +31,7 @@ class SellerBuyRequestsViewController: BaseViewController {
             BidData.get(id: bidId) { (bidData) in
                 self.awardedBidList.insert(bidData, at: 0)
                 self.collectionView.reloadData()
+                self.collectionView.layoutIfNeeded();
             }
         }
         SocketIOApi.shared.socket.on("acceptAward") { (arguments, arc) in
@@ -127,6 +128,9 @@ class SellerBuyRequestsViewCell: AutoHeightCollectionViewCell {
             }
             refreshState()
         }
+    }
+    @IBAction func action_Accept(_ sender: Any) {
+        bidData?.actionAccept()
     }
     
     @IBAction func goToViewDetail(_ sender: Any) {

@@ -65,14 +65,10 @@ extension UserCartViewController: UICollectionViewDataSource, UICollectionViewDe
 class UserCartCell: AutoHeightCollectionViewCell {
     var bid: BidData? {
         didSet {
-            print(bid?.product)
-            print(bid?.post)
             if let bid = bid, let product = bid.product {
                 iv_product.fromURL(urlString: product.url)
                 lbl_productName.text = product.name
-                if let post = bid.post {
-                    lbl_bidPrice.text = post.getFullPrice(price: bid.bidPrice)
-                }
+                lbl_bidPrice.text = bid.fullPrice
             }
         }
     }
