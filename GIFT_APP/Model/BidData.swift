@@ -16,6 +16,7 @@ class BidData: SafeJsonObject {
     var product: Product?
     var productId: String = ""
     var bidPrice: Float = 0.0
+    var deliveryPrice: Float = 0.0
     var priceUnit: PriceUnit = PriceUnit()
     var state: String = "Open"
     var createdAt: String = ""

@@ -1,31 +1,25 @@
 //
-//  CartViewController.swift
+//  UserPaymentSuccessViewController.swift
 //  GIFT_APP
 //
-//  Created by Alguz on 1/22/20.
+//  Created by Alguz on 2/10/20.
 //  Copyright © 2020 Leo Suzin. All rights reserved.
 //
 
 import UIKit
 
-class UserOrderViewController: BaseViewController {
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var containerView: UIView!
-    
-    var currentPage: CGFloat = 0 {
-        didSet {
-            DispatchQueue.main.async {
-                self.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width * self.currentPage, y: 0), animated: true)
-            }
-        }
-    }
-    var paymentTempId: String?
-    
+class UserPaymentSuccessViewController: BaseViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    @IBAction func action_close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
+
     /*
     // MARK: - Navigation
 

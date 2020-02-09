@@ -27,6 +27,7 @@
 		A33FE9E5237F7CC3009A3119 /* PostProposalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FE9E4237F7CC3009A3119 /* PostProposalsController.swift */; };
 		A33FE9E7238034F7009A3119 /* BidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FE9E6238034F7009A3119 /* BidData.swift */; };
 		A33FE9E923803AAD009A3119 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FE9E823803AAD009A3119 /* String.swift */; };
+		A35DA17423EDDDB80008E49A /* GiftHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DA17323EDDDB80008E49A /* GiftHttp.swift */; };
 		A36605552382763200C3D1B2 /* PostReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36605542382763200C3D1B2 /* PostReviewsController.swift */; };
 		A36605572382D1AC00C3D1B2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36605562382D1AC00C3D1B2 /* Review.swift */; };
 		A3678CDA239E46ED006002E3 /* SellerBuyRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3678CD9239E46ED006002E3 /* SellerBuyRequestsViewController.swift */; };
@@ -128,6 +129,9 @@
 		A3BF4A142395156A009F2BDA /* LoginModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF4A132395156A009F2BDA /* LoginModeViewController.swift */; };
 		A3BF4A1623955DAA009F2BDA /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF4A1523955DAA009F2BDA /* EnterCodeViewController.swift */; };
 		A3BF4A182395808F009F2BDA /* SharedViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF4A172395808F009F2BDA /* SharedViewControllers.swift */; };
+		A3C457E423F05EF900C37E95 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C457E323F05EF900C37E95 /* Payment.swift */; };
+		A3C457E823F07A3300C37E95 /* UserPaymentProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C457E723F07A3300C37E95 /* UserPaymentProcessingViewController.swift */; };
+		A3C457EA23F09A7300C37E95 /* UserPaymentSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C457E923F09A7300C37E95 /* UserPaymentSuccessViewController.swift */; };
 		A3C8D12E23D859D6004C6091 /* StoreCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8D12D23D859D6004C6091 /* StoreCart.swift */; };
 		A3C8D13023D87BB8004C6091 /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8D12F23D87BB8004C6091 /* BadgeButton.swift */; };
 		A3C8D13223D891B3004C6091 /* UserOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8D13123D891B3004C6091 /* UserOrderViewController.swift */; };
@@ -185,6 +189,7 @@
 		A33FE9E4237F7CC3009A3119 /* PostProposalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProposalsController.swift; sourceTree = "<group>"; };
 		A33FE9E6238034F7009A3119 /* BidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidData.swift; sourceTree = "<group>"; };
 		A33FE9E823803AAD009A3119 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A35DA17323EDDDB80008E49A /* GiftHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftHttp.swift; sourceTree = "<group>"; };
 		A36605542382763200C3D1B2 /* PostReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReviewsController.swift; sourceTree = "<group>"; };
 		A36605562382D1AC00C3D1B2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		A3678CD9239E46ED006002E3 /* SellerBuyRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerBuyRequestsViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +297,9 @@
 		A3BF4A132395156A009F2BDA /* LoginModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModeViewController.swift; sourceTree = "<group>"; };
 		A3BF4A1523955DAA009F2BDA /* EnterCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
 		A3BF4A172395808F009F2BDA /* SharedViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewControllers.swift; sourceTree = "<group>"; };
+		A3C457E323F05EF900C37E95 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		A3C457E723F07A3300C37E95 /* UserPaymentProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPaymentProcessingViewController.swift; sourceTree = "<group>"; };
+		A3C457E923F09A7300C37E95 /* UserPaymentSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPaymentSuccessViewController.swift; sourceTree = "<group>"; };
 		A3C8D12D23D859D6004C6091 /* StoreCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCart.swift; sourceTree = "<group>"; };
 		A3C8D12F23D87BB8004C6091 /* BadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
 		A3C8D13123D891B3004C6091 /* UserOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrderViewController.swift; sourceTree = "<group>"; };
@@ -512,6 +520,7 @@
 				A3A0A95923A1560200A1DCC5 /* HowToUserRestManager.swift */,
 				A3C9F11323B133B8004E1EFE /* PriceUnit.swift */,
 				A3F9ABE723CB995A0012C9CD /* DeliveryTimeSchedule.swift */,
+				A3C457E323F05EF900C37E95 /* Payment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -576,6 +585,7 @@
 				A36E6B9E236760E0007B2FD1 /* ApiService.swift */,
 				A320B3F32393B794004A18E1 /* RestManager.swift */,
 				A3C9F11123B0A4A0004E1EFE /* SocketIOApi.swift */,
+				A35DA17323EDDDB80008E49A /* GiftHttp.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -779,6 +789,8 @@
 				A3C8D13123D891B3004C6091 /* UserOrderViewController.swift */,
 				A3C8D13723D95C1F004C6091 /* UserCartViewController.swift */,
 				A3B5031A23D988AB0084B5E3 /* UserPaymentViewController.swift */,
+				A3C457E723F07A3300C37E95 /* UserPaymentProcessingViewController.swift */,
+				A3C457E923F09A7300C37E95 /* UserPaymentSuccessViewController.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -1096,8 +1108,10 @@
 				A3CBE55D239AB02200EE2ACC /* SellerSettingViewController.swift in Sources */,
 				A3162D632396A4200015D419 /* MenuTransitioningDelegate.swift in Sources */,
 				A36605572382D1AC00C3D1B2 /* Review.swift in Sources */,
+				A3C457E823F07A3300C37E95 /* UserPaymentProcessingViewController.swift in Sources */,
 				A3C9F11223B0A4A0004E1EFE /* SocketIOApi.swift in Sources */,
 				A3CBE559239A50BD00EE2ACC /* MyTestSegue.swift in Sources */,
+				A3C457E423F05EF900C37E95 /* Payment.swift in Sources */,
 				A39C2DB5237482AC00552B4C /* UIImageView.swift in Sources */,
 				A37F30CC238881FA00ECB708 /* OrdersController.swift in Sources */,
 				A384B37223921E9500D5E9BC /* ImageInfo.swift in Sources */,
@@ -1106,6 +1120,7 @@
 				A36E6BC12367781F007B2FD1 /* iCarousel.m in Sources */,
 				A3F72C0C23979D9300BA251A /* SellerBasesViewController.swift in Sources */,
 				A36E6B88236752E0007B2FD1 /* UIView.swift in Sources */,
+				A3C457EA23F09A7300C37E95 /* UserPaymentSuccessViewController.swift in Sources */,
 				A3A17C8B2388327B00BBB579 /* MainNavigationController.swift in Sources */,
 				A3294CE8236AB2A400911AB9 /* PostDetailViewController.swift in Sources */,
 				A3B091422391245E005D6F36 /* Data.swift in Sources */,
@@ -1155,6 +1170,7 @@
 				A31FED242396577E009421FF /* GiftMainViewController.swift in Sources */,
 				A3D248B723A2B06600EB9A0A /* SellerBidDetailViewController.swift in Sources */,
 				A36E6BCA2367971B007B2FD1 /* BottomAppBar.swift in Sources */,
+				A35DA17423EDDDB80008E49A /* GiftHttp.swift in Sources */,
 				A3F72C1F2399462F00BA251A /* SellerPostRequsetsViewController.swift in Sources */,
 				A33FE9E923803AAD009A3119 /* String.swift in Sources */,
 				A3CBE563239BB31200EE2ACC /* CheckBoxListView.swift in Sources */,

@@ -12,9 +12,9 @@ extension String {
         let _unit = unit ?? "$"
         switch unit {
         case "$":
-            return _unit + price.toString(toFixed: decimal)
+            return _unit + " " + price.toString(toFixed: decimal)
         default:
-            return _unit + price.toString(toFixed: decimal)
+            return _unit + " " + price.toString(toFixed: decimal)
         }
     }
     static func rangePrice(min: Float, max: Float, unit: String, decimal: Int) -> String {

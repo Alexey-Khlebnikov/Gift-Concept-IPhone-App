@@ -19,17 +19,41 @@ class UserPaymentViewController: BaseViewController {
     
     @IBOutlet weak var cnt_Mada: NSLayoutConstraint!
     @IBOutlet weak var cnt_Paypal: NSLayoutConstraint!
+    
+    @IBOutlet weak var lbl_productPrice: UILabel!
+    @IBOutlet weak var lbl_deliveryPrice: UILabel!
+    @IBOutlet weak var lbl_bonusPrice: UILabel!
+    @IBOutlet weak var lbl_totalPrice: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()        // Do any additional setup after loading the view.
         setActiveBtn(btn_credit)
         cancelActiveBtn(btn_mada)
         cancelActiveBtn(btn_paypal)
+        lbl_productPrice.text = StoreCart.shared.totalProductPriceString
+        lbl_deliveryPrice.text = StoreCart.shared.totalDeliveryPriceString
+        lbl_bonusPrice.text = StoreCart.shared.bonusPriceString
+        lbl_totalPrice.text = StoreCart.shared.totalPriceString
     }
     
     @IBAction func action_GotoBack(_ sender: Any) {
         StoreCart.shared.userOrderViewController?.currentPage = 0
     }
     @IBAction func action_Pay(_ sender: Any) {
+        let bidIds = StoreCart.shared.cart.map({$0.id}).joined(separator: ",")
+        GiftHttp.sharedApi.Post("/payment/action_perchase", data: [
+            "bidIds":bidIds,
+            "bonusPrice": StoreCart.shared.bonusPrice.toString(toFixed: 2)
+        ]) { (response) in
+            if let error = response.error {
+                print(error.code + "::" + error.message)
+            } else {
+                StoreCart.shared.userOrderViewController?.paymentTempId = response.data as? String
+                StoreCart.shared.userOrderViewController?.currentPage = 2
+                StoreCart.shared.userPaymentProcessingViewController?.action_paymentProcessing()
+            }
+        }
     }
     @IBAction func setCreditMode(_ sender: Any) {
         cnt_Mada.priority = UILayoutPriority(1000)

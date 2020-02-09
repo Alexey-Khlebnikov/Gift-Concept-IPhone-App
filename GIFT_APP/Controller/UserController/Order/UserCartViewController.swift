@@ -12,17 +12,28 @@ class UserCartViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var cnt_collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var lbl_productPrice: UILabel!
+    @IBOutlet weak var lbl_deliveryPrice: UILabel!
+    @IBOutlet weak var lbl_totalPrice: UILabel!
+    @IBOutlet weak var txt_bonus: BaseTextField!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var totalProductPrice: Float = 0
+    var totalDeliveryPrice: Float = 0
+    var totalPrice: Float = 0
     
     override func viewDidLoad() {
+        self.rootScrollView = scrollView
         super.viewDidLoad()
         self.collectionView.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.old, context: nil)
-        // Do any additional setup after loading the view.
+        lbl_totalPrice.text = String.currencyFormat(price: StoreCart.shared.totalPrice, unit: StoreCart.shared.myPriceUnit.symbol, decimal: 2)
+        lbl_productPrice.text = String.currencyFormat(price: StoreCart.shared.totalProductPrice, unit: StoreCart.shared.myPriceUnit.symbol, decimal: 2)
+        lbl_deliveryPrice.text = String.currencyFormat(price: StoreCart.shared.totalDeliveryPrice, unit: StoreCart.shared.myPriceUnit.symbol, decimal: 2)
     }
     @IBAction func action_GotoPayment(_ sender: Any) {
         StoreCart.shared.userOrderViewController?.currentPage = 1
     }
     
-
     /*
     // MARK: - Navigation
 

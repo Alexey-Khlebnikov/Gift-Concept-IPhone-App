@@ -18,6 +18,7 @@ class PostProposalsController: UIViewController {
     @IBOutlet weak var cnt_proposalHeight: NSLayoutConstraint!
     @IBOutlet weak var btn_viewMore: BaseButton!
     @IBOutlet weak var cnt_viewMore: NSLayoutConstraint!
+    @IBOutlet weak var lbl_averageBid: UILabel!
     
     var socketEventIds: [UUID] = []
     
@@ -61,7 +62,17 @@ class PostProposalsController: UIViewController {
                 }
             }
         }
-        socketEventIds.append(uuid)
+        SocketIOApi.shared.socket.on("Paid_To_Bids") { (arguments, ack) in
+            if let data = arguments[0] as? [String: AnyObject] {
+                let payment = Payment(data)
+                self.totalProposals.forEach { (bidData) in
+                    if payment.bidIds.contains(bidData.id) {
+                        bidData.state = payment.state!
+                    }
+                }
+                self.changedTotalProposals()
+            }
+        }
     }
     
     var newProposals: [BidData] = [] {
@@ -90,7 +101,6 @@ class PostProposalsController: UIViewController {
         self.newProposals = []
     }
     
-    @IBOutlet weak var lbl_averageBid: UILabel!
     var totalProposals: [BidData] = [] {
         didSet {
             changedTotalProposals()
@@ -121,6 +131,7 @@ class PostProposalsController: UIViewController {
         var avg_price: Float = 0
         for proposal in totalProposals {
             total_price = total_price + proposal.bidPrice
+            proposal.priceUnit = post?.priceUnit ?? PriceUnit()
         }
         avg_price = Float(total_price / Float(totalProposals.count))
         if totalProposals.count == 0 {
@@ -208,7 +219,7 @@ class PostProposalCell: BaseCell {
                 lbl_reviewCount.text = String(product.reviewCount) + " reviews"
                 lbl_productDetail.text = product.detail
 //                lbl_realPrice.text = String.currencyFormat(price: product.price, unit: product.priceUnit.symbol, decimal: 2)
-                lbl_bidPrice.text = String.currencyFormat(price: bid?.bidPrice ?? 0.0, unit: product.priceUnit.symbol, decimal: 2)
+                lbl_bidPrice.text = bid?.fullPrice
                 lbl_sellerName.text = product.seller?.username
                 if lbl_productState != nil {
                     lbl_productState.text = bid?.state
