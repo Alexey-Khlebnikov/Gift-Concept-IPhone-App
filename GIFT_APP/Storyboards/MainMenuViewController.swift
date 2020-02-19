@@ -159,8 +159,15 @@ extension MainMenuViewController: UITableViewDelegate, UITableViewDataSource {
             if User.Me.isLogged && User.Me.role == "seller" {
                 if indexPath.row <= 3 {
                     if let homeController = (viewController as! SellerBasesNavigationController).homeController {
-                        homeController.scrollToMenuIndex(menuIndex: indexPath.row)
-                        homeController.setBottomViewItem(menuIndex: indexPath.row)
+                        homeController.scrollToMenuIndex(index: indexPath.row)
+                        homeController.setBottomTabBarItem(index: indexPath.row)
+                    }
+                }
+            } else if User.Me.isLogged && User.Me.role == "driver" {
+                if indexPath.row <= 3 {
+                    if let homeController = (viewController as! DriverBaseNavigationViewController).homeController {
+                        homeController.scrollToMenuIndex(index: indexPath.row)
+                        homeController.setBottomTabBarItem(index: indexPath.row)
                     }
                 }
             } else {

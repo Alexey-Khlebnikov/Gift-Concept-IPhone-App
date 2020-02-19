@@ -32,11 +32,16 @@ class ProductThumbImageView: MyBaseView {
     
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .clear
         addSubview(avatar)
         addSubview(borderView)
     }
     
     func fromURL(urlString: String) {
+        avatar.fromURL(urlString: urlString)
+    }
+    func fromImageId(imageId: String) {
+        let urlString = Setting.serverApiURL + "/product/productImage/" + imageId
         avatar.fromURL(urlString: urlString)
     }
     

@@ -29,7 +29,7 @@ class PostProposalsController: UIViewController {
     }
     
     func setupSockets() {
-        let uuid = SocketIOApi.shared.socket.on("newProposal") { (arguments, ack) in
+        SocketIOApi.shared.socket.on("newProposal") { (arguments, ack) in
             let bidData = BidData(arguments[0] as! [String: AnyObject])
             self.newProposals.append(bidData)
         }

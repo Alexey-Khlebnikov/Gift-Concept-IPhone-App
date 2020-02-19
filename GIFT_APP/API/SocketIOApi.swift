@@ -19,7 +19,6 @@ class SocketIOApi {
     }
     func connect() {
         ApiService.sharedService.find(url: "/buyer/registeGuest/\(Global.udid)") { (res) in
-            print(res)
             self.socket.connect()
         }
     }

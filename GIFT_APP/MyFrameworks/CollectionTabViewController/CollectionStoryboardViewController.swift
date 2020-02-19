@@ -37,6 +37,8 @@ class CollectionStoryboardViewController: BaseViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.estimatedItemSize = .zero
         for storyboardInfo in storyboardInfoList {
             collectionView.register(CollectionStoryboardViewCell.self, forCellWithReuseIdentifier: storyboardInfo.identifier)
         }

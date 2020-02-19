@@ -93,6 +93,9 @@ class User: SafeJsonObject {
             
             let payload = res["payload"] as! [String: AnyObject]
             User.Me = User(payload)
+            
+            User.Me.role = "driver"
+            
             complete()
         }
     }

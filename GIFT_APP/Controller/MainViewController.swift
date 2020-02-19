@@ -88,6 +88,7 @@ class MainViewController: MenuContainerViewController {
         
         
         let sellerNavigationView = UIStoryboard(name: "Seller", bundle: nil).instantiateViewController(identifier: "SellerMainViewController")
+        let driverNavigationView = UIStoryboard(name: "Driver", bundle: nil).instantiateViewController(identifier: "SellerBaseNavigationController")
         
         menuList = [
             "Home": MenuDataItem(title: "Home", icon: UIImage(named: "icon_Home"), viewController: navigationController),
@@ -99,10 +100,17 @@ class MainViewController: MenuContainerViewController {
             "Signup": MenuDataItem(title: "Sign up", icon: UIImage(named: "icon_Signup"), viewController: signupViewController),
             "Logout": MenuDataItem(title: "Log out", icon: UIImage(named: "icon_Logout"), viewController: loginViewController),
 
+            // seller
             "SellerBuyRequests": MenuDataItem(title: "Requests", icon: UIImage(systemName: "tray.2.fill"), viewController: sellerNavigationView),
             "SellerHome1": MenuDataItem(title: "Products", icon: #imageLiteral(resourceName: "icon_Post"), viewController: sellerNavigationView),
             "SellerHome2": MenuDataItem(title: "Alerts", icon: #imageLiteral(resourceName: "icon_Bell"), viewController: sellerNavigationView),
             "SellerHome3": MenuDataItem(title: "Account", icon: #imageLiteral(resourceName: "icon_Account"), viewController: sellerNavigationView),
+            
+            // driver
+            "DriverBuyRequests": MenuDataItem(title: "Requests", icon: UIImage(systemName: "tray.2.fill"), viewController: driverNavigationView),
+            "DriverHome1": MenuDataItem(title: "Tasks", icon: #imageLiteral(resourceName: "icon_Post"), viewController: driverNavigationView),
+            "DriverHome2": MenuDataItem(title: "Alerts", icon: #imageLiteral(resourceName: "icon_Bell"), viewController: driverNavigationView),
+            "DriverHome3": MenuDataItem(title: "Account", icon: #imageLiteral(resourceName: "icon_Account"), viewController: driverNavigationView),
         ]
         return [navigationController, navigationController, navigationController, navigationController, ordersController, loginModeViewController, signupViewController, sellerNavigationView]
     }
@@ -115,11 +123,16 @@ class MainViewController: MenuContainerViewController {
     }
     
     func loggedMenuList() -> [String] {
-        if User.Me.role == "seller" {
+        switch (User.Me.role) {
+        case "seller":
             return ["SellerBuyRequests", "SellerHome1", "SellerHome2", "SellerHome3", "Logout"]
+        case "driver":
+            return ["DriverBuyRequests", "DriverHome1", "DriverHome2", "DriverHome3", "Logout"]
+        default:
+            return ["Home", "Posts", "Alerts", "Account", "Orders", "Logout"]
         }
-        return ["Home", "Posts", "Alerts", "Account", "Orders", "Logout"]
     }
+    
     func loggedOutMenuList() -> [String] {
         return ["Home", "Posts", "Alerts", "Account", "Orders", "Login", "Signup"]
     }

@@ -27,6 +27,7 @@
 		A33FE9E5237F7CC3009A3119 /* PostProposalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FE9E4237F7CC3009A3119 /* PostProposalsController.swift */; };
 		A33FE9E7238034F7009A3119 /* BidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FE9E6238034F7009A3119 /* BidData.swift */; };
 		A33FE9E923803AAD009A3119 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FE9E823803AAD009A3119 /* String.swift */; };
+		A34B63AF23FCBEC3008456CA /* DeliveryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B63AE23FCBEC3008456CA /* DeliveryData.swift */; };
 		A35DA17423EDDDB80008E49A /* GiftHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DA17323EDDDB80008E49A /* GiftHttp.swift */; };
 		A36605552382763200C3D1B2 /* PostReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36605542382763200C3D1B2 /* PostReviewsController.swift */; };
 		A36605572382D1AC00C3D1B2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36605562382D1AC00C3D1B2 /* Review.swift */; };
@@ -93,7 +94,6 @@
 		A39C2DAD2373F47A00552B4C /* InviationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39C2DAC2373F47A00552B4C /* InviationView.xib */; };
 		A39C2DAF2373FAB800552B4C /* InviationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C2DAE2373FAB800552B4C /* InviationView.swift */; };
 		A39C2DB5237482AC00552B4C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C2DB4237482AC00552B4C /* UIImageView.swift */; };
-		A3A0A95823A1541D00A1DCC5 /* DeliveryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0A95723A1541D00A1DCC5 /* DeliveryData.swift */; };
 		A3A0A95A23A1560200A1DCC5 /* HowToUserRestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0A95923A1560200A1DCC5 /* HowToUserRestManager.swift */; };
 		A3A0A95C23A1D57D00A1DCC5 /* SellerOrdersContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0A95B23A1D57D00A1DCC5 /* SellerOrdersContainerViewController.swift */; };
 		A3A0A95E23A1D66A00A1DCC5 /* SellerBuyOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A0A95D23A1D66A00A1DCC5 /* SellerBuyOrderDetailViewController.swift */; };
@@ -147,6 +147,13 @@
 		A3CBE563239BB31200EE2ACC /* CheckBoxListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CBE562239BB31200EE2ACC /* CheckBoxListView.swift */; };
 		A3CBE565239BB35B00EE2ACC /* CheckBoxListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CBE564239BB35B00EE2ACC /* CheckBoxListCell.swift */; };
 		A3CBE567239BB37600EE2ACC /* CheckBoxListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CBE566239BB37500EE2ACC /* CheckBoxListViewDelegate.swift */; };
+		A3CCB38C23F9A07800328210 /* Driver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CCB38B23F9A07800328210 /* Driver.storyboard */; };
+		A3CCB38E23F9A17900328210 /* DriverRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CCB38D23F9A17900328210 /* DriverRootViewController.swift */; };
+		A3CCB39023F9A32F00328210 /* DriverBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CCB38F23F9A32F00328210 /* DriverBaseNavigationViewController.swift */; };
+		A3CCB39623F9C4D200328210 /* DriverPostsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CCB39523F9C4D200328210 /* DriverPostsListViewController.swift */; };
+		A3CCB39823F9C52C00328210 /* DriverTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CCB39723F9C52C00328210 /* DriverTaskViewController.swift */; };
+		A3CCB39A23F9C54A00328210 /* DriverNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CCB39923F9C54A00328210 /* DriverNotificationViewController.swift */; };
+		A3CCB39C23F9C55C00328210 /* DriverAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CCB39B23F9C55C00328210 /* DriverAccountViewController.swift */; };
 		A3D248B723A2B06600EB9A0A /* SellerBidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D248B623A2B06600EB9A0A /* SellerBidDetailViewController.swift */; };
 		A3E4B30A2378F4B3001397A8 /* NewPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4B3092378F4B3001397A8 /* NewPostController.swift */; };
 		A3F3288823CBD4F900D8F94E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3288723CBD4F900D8F94E /* RatingView.swift */; };
@@ -189,6 +196,7 @@
 		A33FE9E4237F7CC3009A3119 /* PostProposalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProposalsController.swift; sourceTree = "<group>"; };
 		A33FE9E6238034F7009A3119 /* BidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidData.swift; sourceTree = "<group>"; };
 		A33FE9E823803AAD009A3119 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A34B63AE23FCBEC3008456CA /* DeliveryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryData.swift; sourceTree = "<group>"; };
 		A35DA17323EDDDB80008E49A /* GiftHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftHttp.swift; sourceTree = "<group>"; };
 		A36605542382763200C3D1B2 /* PostReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReviewsController.swift; sourceTree = "<group>"; };
 		A36605562382D1AC00C3D1B2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -260,7 +268,6 @@
 		A39C2DAC2373F47A00552B4C /* InviationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviationView.xib; sourceTree = "<group>"; };
 		A39C2DAE2373FAB800552B4C /* InviationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviationView.swift; sourceTree = "<group>"; };
 		A39C2DB4237482AC00552B4C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		A3A0A95723A1541D00A1DCC5 /* DeliveryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryData.swift; sourceTree = "<group>"; };
 		A3A0A95923A1560200A1DCC5 /* HowToUserRestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUserRestManager.swift; sourceTree = "<group>"; };
 		A3A0A95B23A1D57D00A1DCC5 /* SellerOrdersContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerOrdersContainerViewController.swift; sourceTree = "<group>"; };
 		A3A0A95D23A1D66A00A1DCC5 /* SellerBuyOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerBuyOrderDetailViewController.swift; sourceTree = "<group>"; };
@@ -315,6 +322,13 @@
 		A3CBE562239BB31200EE2ACC /* CheckBoxListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxListView.swift; sourceTree = "<group>"; };
 		A3CBE564239BB35B00EE2ACC /* CheckBoxListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxListCell.swift; sourceTree = "<group>"; };
 		A3CBE566239BB37500EE2ACC /* CheckBoxListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxListViewDelegate.swift; sourceTree = "<group>"; };
+		A3CCB38B23F9A07800328210 /* Driver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Driver.storyboard; sourceTree = "<group>"; };
+		A3CCB38D23F9A17900328210 /* DriverRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRootViewController.swift; sourceTree = "<group>"; };
+		A3CCB38F23F9A32F00328210 /* DriverBaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverBaseNavigationViewController.swift; sourceTree = "<group>"; };
+		A3CCB39523F9C4D200328210 /* DriverPostsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverPostsListViewController.swift; sourceTree = "<group>"; };
+		A3CCB39723F9C52C00328210 /* DriverTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTaskViewController.swift; sourceTree = "<group>"; };
+		A3CCB39923F9C54A00328210 /* DriverNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverNotificationViewController.swift; sourceTree = "<group>"; };
+		A3CCB39B23F9C55C00328210 /* DriverAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAccountViewController.swift; sourceTree = "<group>"; };
 		A3D248B623A2B06600EB9A0A /* SellerBidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerBidDetailViewController.swift; sourceTree = "<group>"; };
 		A3E4B3092378F4B3001397A8 /* NewPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostController.swift; sourceTree = "<group>"; };
 		A3F3288723CBD4F900D8F94E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
@@ -440,6 +454,14 @@
 			path = GoogleApi;
 			sourceTree = "<group>";
 		};
+		A34B63AD23FCBEA7008456CA /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				A34B63AE23FCBEC3008456CA /* DeliveryData.swift */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
 		A36E6B4E2366E4AB007B2FD1 = {
 			isa = PBXGroup;
 			children = (
@@ -487,13 +509,14 @@
 		A36E6B6E2366F668007B2FD1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A3A13EE723D059C5005892A1 /* UserController */,
-				A31FED2223965729009421FF /* SellerController */,
-				A3A88D4D238E62F4006CE9D2 /* Post */,
 				A37F30CD23888CFD00ECB708 /* AuthControllers */,
+				A3A13EE723D059C5005892A1 /* UserController */,
+				A3A88D4D238E62F4006CE9D2 /* Post */,
+				A31FED2223965729009421FF /* SellerController */,
+				A3CCB38A23F99FE900328210 /* DriverController */,
+				A36E6B752366F90D007B2FD1 /* HomeController.swift */,
 				A3A17C7D2387DD3500BBB579 /* MainViewController.swift */,
 				A3A17C8A2388327B00BBB579 /* MainNavigationController.swift */,
-				A36E6B752366F90D007B2FD1 /* HomeController.swift */,
 				A36E6BB2236770D5007B2FD1 /* SoldProductListController.swift */,
 				A376CE7B236C63FA00493FB2 /* AccountSettingViewController.swift */,
 				A3A4ECBF236DB1A800A56E52 /* ProductDetailViewController.swift */,
@@ -505,6 +528,7 @@
 		A36E6B6F2366F671007B2FD1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A34B63AD23FCBEA7008456CA /* Driver */,
 				A36E6B8D23675780007B2FD1 /* Category.swift */,
 				A36E6B8F2367580B007B2FD1 /* User.swift */,
 				A36E6B9123675875007B2FD1 /* SoldProduct.swift */,
@@ -516,7 +540,6 @@
 				A33FE9E6238034F7009A3119 /* BidData.swift */,
 				A36605562382D1AC00C3D1B2 /* Review.swift */,
 				A384B37123921E9500D5E9BC /* ImageInfo.swift */,
-				A3A0A95723A1541D00A1DCC5 /* DeliveryData.swift */,
 				A3A0A95923A1560200A1DCC5 /* HowToUserRestManager.swift */,
 				A3C9F11323B133B8004E1EFE /* PriceUnit.swift */,
 				A3F9ABE723CB995A0012C9CD /* DeliveryTimeSchedule.swift */,
@@ -717,6 +740,7 @@
 				A3A17C862387E0F600BBB579 /* MainMenuViewController.storyboard */,
 				A3A17C882387E10E00BBB579 /* MainMenuViewController.swift */,
 				A3BF4A11239453D4009F2BDA /* Seller.storyboard */,
+				A3CCB38B23F9A07800328210 /* Driver.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -820,6 +844,51 @@
 				A3CBE566239BB37500EE2ACC /* CheckBoxListViewDelegate.swift */,
 			);
 			path = CheckBoxListView;
+			sourceTree = "<group>";
+		};
+		A3CCB38A23F99FE900328210 /* DriverController */ = {
+			isa = PBXGroup;
+			children = (
+				A3CCB39423F9C49700328210 /* Accounts */,
+				A3CCB39323F9C48200328210 /* Notifications */,
+				A3CCB39223F9C47C00328210 /* Tasks */,
+				A3CCB39123F9C47400328210 /* Posts */,
+				A3CCB38F23F9A32F00328210 /* DriverBaseNavigationViewController.swift */,
+				A3CCB38D23F9A17900328210 /* DriverRootViewController.swift */,
+			);
+			path = DriverController;
+			sourceTree = "<group>";
+		};
+		A3CCB39123F9C47400328210 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				A3CCB39523F9C4D200328210 /* DriverPostsListViewController.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		A3CCB39223F9C47C00328210 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				A3CCB39723F9C52C00328210 /* DriverTaskViewController.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		A3CCB39323F9C48200328210 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				A3CCB39923F9C54A00328210 /* DriverNotificationViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		A3CCB39423F9C49700328210 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				A3CCB39B23F9C55C00328210 /* DriverAccountViewController.swift */,
+			);
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 		A3EF801D2392C4C10011EC88 /* Object-C */ = {
@@ -950,6 +1019,7 @@
 				A39C2DA82373EA1B00552B4C /* CardView.xib in Resources */,
 				A39C2DAD2373F47A00552B4C /* InviationView.xib in Resources */,
 				A36E6B642366E4AC007B2FD1 /* Assets.xcassets in Resources */,
+				A3CCB38C23F9A07800328210 /* Driver.storyboard in Resources */,
 				A36E6B622366E4AB007B2FD1 /* Main.storyboard in Resources */,
 				A37F30CF23888D3200ECB708 /* Auth.storyboard in Resources */,
 				A39C2DA62373EA1B00552B4C /* CenteredView.xib in Resources */,
@@ -1082,6 +1152,8 @@
 				A3F3288A23CBD82D00D8F94E /* SellerProductsViewController.swift in Sources */,
 				A36E6BB1236762B1007B2FD1 /* Errors.swift in Sources */,
 				A33FE9E5237F7CC3009A3119 /* PostProposalsController.swift in Sources */,
+				A34B63AF23FCBEC3008456CA /* DeliveryData.swift in Sources */,
+				A3CCB39A23F9C54A00328210 /* DriverNotificationViewController.swift in Sources */,
 				A3C8D12E23D859D6004C6091 /* StoreCart.swift in Sources */,
 				A36E6B8A2367530F007B2FD1 /* CGFloat.swift in Sources */,
 				A376CE77236C014300493FB2 /* Setting.swift in Sources */,
@@ -1109,8 +1181,10 @@
 				A3162D632396A4200015D419 /* MenuTransitioningDelegate.swift in Sources */,
 				A36605572382D1AC00C3D1B2 /* Review.swift in Sources */,
 				A3C457E823F07A3300C37E95 /* UserPaymentProcessingViewController.swift in Sources */,
+				A3CCB38E23F9A17900328210 /* DriverRootViewController.swift in Sources */,
 				A3C9F11223B0A4A0004E1EFE /* SocketIOApi.swift in Sources */,
 				A3CBE559239A50BD00EE2ACC /* MyTestSegue.swift in Sources */,
+				A3CCB39823F9C52C00328210 /* DriverTaskViewController.swift in Sources */,
 				A3C457E423F05EF900C37E95 /* Payment.swift in Sources */,
 				A39C2DB5237482AC00552B4C /* UIImageView.swift in Sources */,
 				A37F30CC238881FA00ECB708 /* OrdersController.swift in Sources */,
@@ -1150,6 +1224,7 @@
 				A33FE9E7238034F7009A3119 /* BidData.swift in Sources */,
 				A36E6B7D23674FA9007B2FD1 /* BottomReverseRoundedView.swift in Sources */,
 				A3F72C152397D70D00BA251A /* CollectionStoryboardViewController.swift in Sources */,
+				A3CCB39C23F9C55C00328210 /* DriverAccountViewController.swift in Sources */,
 				A3162D5F2396A3F10015D419 /* MenuAnnimator.swift in Sources */,
 				A3A88D4F238E630C006CE9D2 /* PostListViewController.swift in Sources */,
 				A3F3288823CBD4F900D8F94E /* RatingView.swift in Sources */,
@@ -1160,6 +1235,8 @@
 				A382FDB5236AA4E700D6595A /* PaddingLabel.swift in Sources */,
 				A3BCABDF2390CBA60002542F /* BaseButton.swift in Sources */,
 				A3F72C2423996F1800BA251A /* SellerPostDetailViewController.swift in Sources */,
+				A3CCB39623F9C4D200328210 /* DriverPostsListViewController.swift in Sources */,
+				A3CCB39023F9A32F00328210 /* DriverBaseNavigationViewController.swift in Sources */,
 				A37F30C92388761A00ECB708 /* Global.swift in Sources */,
 				A3A17C7E2387DD3500BBB579 /* MainViewController.swift in Sources */,
 				A3CBE55B239A565800EE2ACC /* MyTestDismissSegue.swift in Sources */,
@@ -1182,7 +1259,6 @@
 				A36E6B9D2367606B007B2FD1 /* CustomCollectionView.swift in Sources */,
 				A3B48E5423AFD9E6003D4BB8 /* TextFieldValidator.m in Sources */,
 				A33582EB237D523300188BB5 /* Attach.swift in Sources */,
-				A3A0A95823A1541D00A1DCC5 /* DeliveryData.swift in Sources */,
 				A3A65CCB23CD003400723C56 /* BasePhoneNumberTextField.swift in Sources */,
 				A3BEB2D9238668B4008A83C3 /* BaseTextView.swift in Sources */,
 				A36E6B8C236755A8007B2FD1 /* BezierVew.swift in Sources */,

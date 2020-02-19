@@ -1,18 +1,14 @@
 //
-//  MainNavigationController.swift
+//  DriverAccountViewController.swift
 //  GIFT_APP
 //
-//  Created by Alguz on 11/23/19.
-//  Copyright © 2019 Leo Suzin. All rights reserved.
+//  Created by Alguz on 2/17/20.
+//  Copyright © 2020 Leo Suzin. All rights reserved.
 //
 
 import UIKit
 
-class MainNavigationController: UINavigationController {
-    
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+class DriverAccountViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +16,6 @@ class MainNavigationController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
-    var homeController: HomeController? {
-        get {
-            return viewControllers[0] as? HomeController ?? nil
-        }
-    }
 
     /*
     // MARK: - Navigation

@@ -22,9 +22,9 @@ class SellerBasesNavigationController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
-    var homeController: HomeController? {
+    var homeController: SellerBasesViewController? {
         get {
-            return viewControllers[0] as? HomeController ?? nil
+            return viewControllers[0] as? SellerBasesViewController ?? nil
         }
     }
 

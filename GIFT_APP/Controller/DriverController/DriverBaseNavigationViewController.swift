@@ -1,14 +1,15 @@
 //
-//  MainNavigationController.swift
+//  DriverBaseNavigationViewController.swift
 //  GIFT_APP
 //
-//  Created by Alguz on 11/23/19.
-//  Copyright © 2019 Leo Suzin. All rights reserved.
+//  Created by Alguz on 2/17/20.
+//  Copyright © 2020 Leo Suzin. All rights reserved.
 //
 
 import UIKit
 
-class MainNavigationController: UINavigationController {
+class DriverBaseNavigationViewController: UINavigationController {
+
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -16,15 +17,19 @@ class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationBar.tintColor = .white
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationBar.titleTextAttributes = textAttributes
         // Do any additional setup after loading the view.
     }
     
-    var homeController: HomeController? {
+    
+    var homeController: DriverRootViewController? {
         get {
-            return viewControllers[0] as? HomeController ?? nil
+            return viewControllers[0] as? DriverRootViewController ?? nil
         }
     }
+
 
     /*
     // MARK: - Navigation
