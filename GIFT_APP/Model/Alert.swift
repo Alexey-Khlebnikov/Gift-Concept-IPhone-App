@@ -8,7 +8,7 @@
 
 import Foundation
 class Alert: SafeJsonObject {
-    var type: String = "John accepted your request"
+    var type: String = "Admin Alert"
     var name: String = "John accepted your request"
     var content: String = "Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus.onec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus.onec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus.onec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus.onec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus."
     var option: String = "Last seen 3 minutes ago"

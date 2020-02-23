@@ -31,6 +31,8 @@ class AvatarImageView: MyBaseView {
     }()
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .clear
+        
         addSubview(avatar)
         addSubview(borderView)
     }

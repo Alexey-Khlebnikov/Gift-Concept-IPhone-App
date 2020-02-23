@@ -10,9 +10,11 @@ import UIKit
 
 class DriverAccountViewController: BaseViewController {
 
+    @IBOutlet weak var iv_avatar: AvatarImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        iv_avatar.fromURL(urlString: "girl.png")
         // Do any additional setup after loading the view.
     }
     

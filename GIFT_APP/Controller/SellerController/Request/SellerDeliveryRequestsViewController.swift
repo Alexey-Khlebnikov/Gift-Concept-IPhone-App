@@ -12,6 +12,7 @@ class SellerDeliveryRequestsViewController: BaseViewController {
     var deliveryDataList: [DeliveryData] = [] {
         didSet {
             DispatchQueue.main.async {
+                self.collectionView.reloadData()
             }
         }
     }
@@ -33,7 +34,6 @@ class SellerDeliveryRequestsViewController: BaseViewController {
     private func loadData() {
         DeliveryData.getList { (list) in
             self.deliveryDataList = list
-            self.collectionView.reloadData()
         }
     }
 

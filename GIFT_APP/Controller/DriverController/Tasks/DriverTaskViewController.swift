@@ -58,6 +58,7 @@ extension DriverTaskViewController: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DriverTaskCell", for: indexPath) as! DriverTaskCell
         cell.maxWidth = collectionView.frame.width
+        cell.deliveryData = tasks[indexPath.item]
         return cell
     }
     
@@ -67,5 +68,36 @@ extension DriverTaskViewController: UICollectionViewDataSource, UICollectionView
 }
 
 class DriverTaskCell: AutoHeightCollectionViewCell {
+    var deliveryData: DeliveryData? {
+        didSet {
+            if let imageId = self.deliveryData?.productImageId {
+                iv_productImage.fromImageId(imageId: imageId)
+            }
+            lbl_productName.text = self.deliveryData?.productName
+            lbl_sellerPosition.text = self.deliveryData?.from
+            lbl_buyerPosition.text = self.deliveryData?.to
+            lbl_deliveryPrice.text = self.deliveryData?.deliveryPriceString
+        }
+    }
+    override var isHighlighted: Bool {
+        didSet {
+            if self.isHighlighted {
+                backgroundColor = UIColor(rgb: 0xCACACA, alpha: 1)
+            } else {
+                backgroundColor = .white
+            }
+        }
+    }
     
+    
+    @IBOutlet weak var iv_productImage: ProductThumbImageView!
+    @IBOutlet weak var lbl_productName: UILabel!
+    @IBOutlet weak var lbl_sellerPosition: UILabel!
+    @IBOutlet weak var lbl_buyerPosition: UILabel!
+    @IBOutlet weak var lbl_deliveryPrice: UILabel!
+    
+    @IBAction func action_revoke(_ sender: Any) {
+    }
+    @IBAction func action_accept(_ sender: Any) {
+    }
 }
