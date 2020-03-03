@@ -1,0 +1,21 @@
+PODS:
+  - PhoneNumberKit (3.2.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.2.0)
+    - PhoneNumberKit/UIKit (= 3.2.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.2.0)
+  - PhoneNumberKit/UIKit (3.2.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+
+DEPENDENCIES:
+  - PhoneNumberKit (from `../..`)
+
+EXTERNAL SOURCES:
+  PhoneNumberKit:
+    :path: "../.."
+
+SPEC CHECKSUMS:
+  PhoneNumberKit: 68ab3f36afb0e9d848f6bde9a58f59d0e033c1f3
+
+PODFILE CHECKSUM: 11a3da7879907840cc0b74b0bf4a287989027be7
+
+COCOAPODS: 1.6.1

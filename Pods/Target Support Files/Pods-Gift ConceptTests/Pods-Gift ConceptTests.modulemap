@@ -1,0 +1,6 @@
+framework module Pods_Gift_ConceptTests {
+  umbrella header "Pods-Gift ConceptTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
