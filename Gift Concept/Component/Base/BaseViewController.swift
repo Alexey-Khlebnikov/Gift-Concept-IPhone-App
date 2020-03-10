@@ -16,6 +16,36 @@ public protocol ViewDidLoadDelegate: NSObjectProtocol {
 
 public class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    var socketEventIds: [UUID] = []
+    
+    
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setupInit()
+    }
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupInit()
+    }
+    
+    
+    public func setupInit() {
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeSocketEvents()
+    }
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupSocket()
+    }
+    public func removeSocketEvents() {
+        socketEventIds.forEach { (id) in
+            SocketIOApi.shared.socket.off(id: id)
+        }
+    }
+    
     var superViewController: UIViewController?
     
     override public var prefersStatusBarHidden: Bool {
@@ -45,7 +75,6 @@ public class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         viewDidLoadDelegate?.viewDidLoad(self)
         setupSocket()
     }
-    
     
     func setupSocket() {
         

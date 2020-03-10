@@ -26,14 +26,26 @@ class DriverTaskViewController: BaseViewController {
         }
     }
     
+    override func setupSocket() {
+        super.setupSocket()
+        SocketIOApi.shared.socket.on("bidDelivery") { (arguments, arc) in
+            guard let data = arguments[0] as? [String: String] else {
+                return
+            }
+//            self.deliveryData.deliverierIds.append(data["deliveryId"]!)
+//            self.setupControlBtns()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        print("DriverTaskViewController viewDidLoad")
         // Do any additional setup after loading the view.
     }
     
     func loadData() {
-        DeliveryData.getList { (list) in
+        DeliveryData.getAlldeliveryRequests { (list) in
             self.tasks = list
         }
     }

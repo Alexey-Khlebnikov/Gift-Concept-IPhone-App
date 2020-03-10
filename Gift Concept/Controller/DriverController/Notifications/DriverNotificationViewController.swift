@@ -28,7 +28,7 @@ class DriverNotificationViewController: BaseViewController {
     }
     
     func loadData() {
-        DeliveryData.getList { (list) in
+        DeliveryData.getAlldeliveryRequests { (list) in
             self.notifications = list.map({_ in return Alert()})
         }
     }

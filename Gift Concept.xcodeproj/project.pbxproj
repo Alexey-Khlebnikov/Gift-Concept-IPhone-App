@@ -172,6 +172,7 @@
 		A33AE8FC240E17590052C989 /* DriverTaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AE7D1240DF7C80052C989 /* DriverTaskDetailViewController.swift */; };
 		A33AE8FD240E17640052C989 /* DriverAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AE7D5240DF7C80052C989 /* DriverAccountViewController.swift */; };
 		A33AE8FE240E17720052C989 /* DriverNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AE7D7240DF7C80052C989 /* DriverNotificationViewController.swift */; };
+		A3DFC5DC2416BE1C00717B67 /* DeliveryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFC5DB2416BE1C00717B67 /* DeliveryState.swift */; };
 		B6B7E93FD0E7EF1417A39FFF /* Pods_Gift_Concept.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7039A2477181D2C46BE70DAA /* Pods_Gift_Concept.framework */; };
 /* End PBXBuildFile section */
 
@@ -378,6 +379,7 @@
 		A33AE8F4240E02210052C989 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A33AE8F5240E02210052C989 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A33AE8F8240E02E70052C989 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		A3DFC5DB2416BE1C00717B67 /* DeliveryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryState.swift; sourceTree = "<group>"; };
 		ADA0A0B426C47ADDB484136A /* Pods-Gift ConceptUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gift ConceptUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gift ConceptUITests/Pods-Gift ConceptUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D869696352EC4E2CDEA7EC52 /* Pods-Gift Concept.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gift Concept.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gift Concept/Pods-Gift Concept.debug.xcconfig"; sourceTree = "<group>"; };
 		E346316DF3BAE8A9257B3DC1 /* Pods_Gift_ConceptTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gift_ConceptTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -531,6 +533,7 @@
 			isa = PBXGroup;
 			children = (
 				A33AE782240DF6E10052C989 /* PostState.swift */,
+				A3DFC5DB2416BE1C00717B67 /* DeliveryState.swift */,
 			);
 			path = Consts;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				A33AE7C6240DF7C80052C989 /* HomeController.swift */,
 				A33AE7C7240DF7C80052C989 /* SoldProductListController.swift */,
 				A33AE7C8240DF7C80052C989 /* ProductDetailViewController.swift */,
+				A33AE8CF240DFDAC0052C989 /* MainMenuViewController.swift */,
 				A33AE7E6240DF7C80052C989 /* MainNavigationController.swift */,
 				A33AE7C9240DF7C80052C989 /* MainViewController.swift */,
 				A33AE7CA240DF7C80052C989 /* OrdersController.swift */,
@@ -989,7 +993,6 @@
 				A33AE8F5240E02210052C989 /* LaunchScreen.storyboard */,
 				A33AE8F8240E02E70052C989 /* Auth.storyboard */,
 				A33AE8F4240E02210052C989 /* Main.storyboard */,
-				A33AE8CF240DFDAC0052C989 /* MainMenuViewController.swift */,
 				A33AE8EF240E01830052C989 /* Driver.storyboard */,
 				A33AE8F0240E01840052C989 /* MainMenuViewController.storyboard */,
 				A33AE8EE240E01820052C989 /* Seller.storyboard */,
@@ -1521,6 +1524,7 @@
 				A33AE8E1240E003F0052C989 /* ProductCell.swift in Sources */,
 				A33AE897240DFB130052C989 /* MyBaseView.swift in Sources */,
 				A33AE89E240DFB480052C989 /* AccountSettingViewController.swift in Sources */,
+				A3DFC5DC2416BE1C00717B67 /* DeliveryState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

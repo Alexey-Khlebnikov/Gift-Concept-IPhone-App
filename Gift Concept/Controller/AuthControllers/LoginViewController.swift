@@ -26,7 +26,8 @@ class LoginViewController: BaseViewController, SideMenuItemContent {
         txt_email.addRegx(RegExString.email, withMsg: "Please insert a vaild email")
         txt_password.addRegx(RegExString.password, withMsg: "The length of password is 6~50.")
         
-        txt_email.text = "odcruningodc@gmail.com"
+//        txt_email.text = "odcruningodc@gmail.com"
+        txt_email.text = "sotnikov.uri@gmail.com"
         txt_password.text = "123456"
         btn_login.setEnabled(true, animated: false)
     }

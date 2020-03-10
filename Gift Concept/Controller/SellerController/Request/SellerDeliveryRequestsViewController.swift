@@ -16,6 +16,37 @@ class SellerDeliveryRequestsViewController: BaseViewController {
             }
         }
     }
+    var deliveryData: DeliveryData? {
+        didSet {
+            renderData()
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    var deliveriers: [(deliverier: User, state: DeliveryState)] = []
+    
+    func renderData() {
+        deliveriers = []
+        if let deliveryData = self.deliveryData {
+            var dic: [String: User] = [:]
+            for deliverier in deliveryData.deliveriers {
+                dic[deliverier.id] = deliverier
+            }
+            if deliveryData.deliveryId != nil {
+                self.deliveriers.append((dic[deliveryData.deliveryId]!, .accepted))
+                dic.removeValue(forKey: deliveryData.deliveryId)
+            }
+            for deliverierId in deliveryData.awardedDeliverierIds {
+                self.deliveriers.append((dic[deliverierId]!, .awarded))
+                dic.removeValue(forKey: deliverierId)
+            }
+            for (_, deliverier) in dic {
+                self.deliveriers.append((deliverier, .bidded))
+            }
+        }
+    }
     
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout! {
@@ -25,16 +56,28 @@ class SellerDeliveryRequestsViewController: BaseViewController {
     }
     @IBOutlet weak var collectionView: UICollectionView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         loadData()
-        // Do any additional setup after loading the view.
     }
     
     private func loadData() {
-        DeliveryData.getList { (list) in
-            self.deliveryDataList = list
+        if let bidId = sender as? String {
+            DeliveryData.getDeliveryDataForSeller(bidId: bidId) { (deliveryData) in
+                self.deliveryData = deliveryData
+            }
         }
+    }
+    
+    override func setupSocket() {
+        socketEventIds.append(SocketIOApi.shared.socket.on("", callback: { (arguments, arc) in
+            guard let data = arguments[0] as? [String: String] else {
+                return
+            }
+//            DeliveryData.getData(bidId: data["bidId"]!) { (deliveryData) in
+//                self.deliveryDataList.append(deliveryData)
+//            }
+        }))
     }
 
     /*
@@ -51,7 +94,7 @@ class SellerDeliveryRequestsViewController: BaseViewController {
 
 extension SellerDeliveryRequestsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return deliveryDataList.count
+        return deliveriers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,7 +104,8 @@ extension SellerDeliveryRequestsViewController: UICollectionViewDataSource, UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SellerDeliveryRequestViewCell", for: indexPath) as! SellerDeliveryRequestViewCell
         cell.maxWidth = collectionView.frame.width - temp.left - temp.right
         cell.viewController = self
-        cell.deliveryData = deliveryDataList[indexPath.item]
+        cell.deliveryData = deliveryData
+        cell.data = deliveriers[indexPath.item]
         
         return cell
     }
@@ -69,11 +113,48 @@ extension SellerDeliveryRequestsViewController: UICollectionViewDataSource, UICo
 }
 
 class SellerDeliveryRequestViewCell: AutoHeightCollectionViewCell {
-    var deliveryData: DeliveryData? {
+    
+    
+    var deliveryData: DeliveryData!
+    var data: (deliverier: User, state: DeliveryState)! {
         didSet {
-            aiv_avatar.fromURL(urlString: "girl.png")
+            deliverier = self.data.deliverier
+            refreshView()
         }
     }
+    
+    private var deliverier: User!
+    
+    private var stateData: [DeliveryState: String] = [
+        DeliveryState.accepted: "Accepted",
+        DeliveryState.awarded: "Waiting Acception",
+        DeliveryState.bidded: ""
+    ]
+    
+    func refreshView() {
+        lbl_deliverierName.text = deliverier.username
+        ratingView.value = CGFloat(4.2)
+        aiv_avatar.fromURL(urlString: deliverier.avatar)
+        
+        btn_award.isHidden = data.state != .bidded
+        lbl_state.isHidden = data.state == .bidded
+        lbl_state.text = stateData[data.state]
+    }
+    
+    
     @IBOutlet weak var aiv_avatar: AvatarImageView!
+    @IBOutlet weak var lbl_deliverierName: UILabel!
+    @IBOutlet weak var ratingView: RatingView!
+    @IBOutlet weak var btn_award: BaseButton!
+    @IBOutlet weak var lbl_state: UILabel!
+    
+    @IBAction func action_award(_ sender: Any) {
+        deliveryData.award(deliverierId: deliverier.id) { (response) in
+            if response.error != nil {
+                
+            }
+        }
+    }
     
 }
+

@@ -81,7 +81,7 @@ class SellerBuyRequestsViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SellerOrdersContainerViewController" {
             let vc = segue.destination as! SellerOrdersContainerViewController
-            vc.postId = sender as? String
+            vc.bidData = sender as? BidData
         }
     }
 
@@ -134,7 +134,7 @@ class SellerBuyRequestsViewCell: AutoHeightCollectionViewCell {
     }
     
     @IBAction func goToViewDetail(_ sender: Any) {
-        self.viewController?.performSegue(withIdentifier: "SellerOrdersContainerViewController", sender: bidData?.postId)
+        self.viewController?.performSegue(withIdentifier: "SellerOrdersContainerViewController", sender: bidData)
     }
     
     

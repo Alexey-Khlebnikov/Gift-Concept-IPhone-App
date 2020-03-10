@@ -83,6 +83,7 @@ class SellerPostRequsetsViewController: BaseViewController {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.isDragging = true
     }
+    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
             self.isDragging = true
@@ -97,16 +98,20 @@ class SellerPostRequsetsViewController: BaseViewController {
         }
          self.isDragging = false
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if !self.isDragging {
             let post = postData[indexPath.item]
             if !post.isBided {
                 self.performSegue(withIdentifier: "SellerCreateProposalViewSegue", sender: post)
             } else {
-                self.performSegue(withIdentifier: "PostListToBiddedPostDetail", sender: post.id)
+                BidData.getMyBidInPost(postId: post.id) { (bidData) in
+                    self.performSegue(withIdentifier: "PostListToBiddedPostDetail", sender: bidData)
+                }
             }
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         self.isDragging = false
         let cell = collectionView.cellForItem(at: indexPath) as! SellerPostViewCell
@@ -123,7 +128,7 @@ class SellerPostRequsetsViewController: BaseViewController {
             vc.postData = sender as? Post
         } else if segue.identifier == "PostListToBiddedPostDetail" {
             let vc = segue.destination as! SellerOrdersContainerViewController
-            vc.postId = sender as! String
+            vc.bidData = sender as! BidData
         }
     }
 

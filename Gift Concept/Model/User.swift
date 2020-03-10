@@ -37,6 +37,7 @@ class User: SafeJsonObject {
     var id: String  = ""
     var email: String?
     var photoURL: String = ""
+    var avatar: String?
     var username: String?
     var displayName: String?
     var role: String?

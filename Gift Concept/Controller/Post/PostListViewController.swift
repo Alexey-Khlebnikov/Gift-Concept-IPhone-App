@@ -23,6 +23,7 @@ class PostListViewController: UIViewController {
             }
         }
     }
+    
     var socketEventIds: [UUID] = []
     
     override func viewDidLoad() {
@@ -31,13 +32,23 @@ class PostListViewController: UIViewController {
         loadMyPosts()
         // Do any additional setup after loading the view.
         
-        let uuid = SocketIOApi.shared.socket.on("newPost") { (arguments, ack) in
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        socketEventIds.append(SocketIOApi.shared.socket.on("newPost") { (arguments, ack) in
             let post = Post(arguments[0] as! [String: AnyObject])
             DispatchQueue.main.async {
                 self.myPosts.insert(post, at: 0)
             }
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        socketEventIds.forEach { (id) in
+            SocketIOApi.shared.socket.off(id: id)
         }
-        socketEventIds.append(uuid)
     }
     
     func loadMyPosts() {

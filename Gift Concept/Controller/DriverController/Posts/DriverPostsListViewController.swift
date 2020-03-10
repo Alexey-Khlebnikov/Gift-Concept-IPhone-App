@@ -41,14 +41,48 @@ class DriverPostsListViewController: BaseViewController {
         super.viewDidLoad()
         defaultCntOfNewRequestsAlert = cnt_newRequestsAlert.constant
         cnt_newRequestsAlert.constant = 0
-        loadData()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
+    }
+    
+    
+    override func setupSocket() {
+        super.setupSocket()
+        let uid = SocketIOApi.shared.socket.on("bidDelivery") { (arguments, arc) in
+            guard let data = arguments[0] as? [String: String] else {
+                return
+            }
+            self.insertDeliveryIdToCell(bidId: data["bidId"]!, deliveryId: data["deliveryId"]!)
+        }
+        socketEventIds.append(uid)
+    }
     func loadData() {
-        DeliveryData.getList { (deliveryRequests) in
+        DeliveryData.getAlldeliveryRequests { (deliveryRequests) in
             self.deliveryRequests = deliveryRequests
         }
     }
+    
+    func insertDeliveryIdToCell(bidId: String, deliveryId: String) {
+        let index = deliveryRequests.firstIndex { (item) -> Bool in
+            return item.bidId == bidId
+        }
+        if index != nil {
+            let cell = collectionView.cellForItem(at: IndexPath(item: index!, section: 0)) as! DriverRequestCell
+            cell.deliveryData?.deliverierIds.append(deliveryId)
+            cell.refreshView()
+            return
+        }
+        let deliveryData = newDeliveryRequests.first(where: { (item) -> Bool in
+            return item.bidId == bidId
+        })
+        if deliveryData != nil {
+            deliveryData?.deliverierIds.append(deliveryId)
+        }
+    }
+
     @IBAction func action_showNewRequests(_ sender: Any) {
     }
     
@@ -87,18 +121,22 @@ extension DriverPostsListViewController: UICollectionViewDataSource, UICollectio
 class DriverRequestCell: AutoHeightCollectionViewCell {
     var deliveryData: DeliveryData? {
         didSet {
-            lbl_productName.text = self.deliveryData?.productName
-            lbl_sellerAddress.text = self.deliveryData?.from
-            lbl_buyerAddress.text = self.deliveryData?.to
-            lbl_deliveryPrice.text = self.deliveryData?.deliveryPriceString
-            lbl_state.isHidden = true
-            if let _ =  self.deliveryData?.deliverierIds.contains(User.Me.id) {
-                lbl_state.text = "You bidded"
-                lbl_state.isHidden = false
-            }
-            if let imageId = self.deliveryData?.productImageId {
-                iv_product.fromImageId(imageId: imageId)
-            }
+            refreshView()
+        }
+    }
+    
+    func refreshView() {
+        lbl_productName.text = self.deliveryData?.productName
+        lbl_sellerAddress.text = self.deliveryData?.from
+        lbl_buyerAddress.text = self.deliveryData?.to
+        lbl_deliveryPrice.text = self.deliveryData?.deliveryPriceString
+        lbl_state.isHidden = true
+        if self.deliveryData?.deliverierIds.contains(User.Me.id) ?? false {
+            lbl_state.text = "You bidded"
+            lbl_state.isHidden = false
+        }
+        if let imageId = self.deliveryData?.productImageId {
+            iv_product.fromImageId(imageId: imageId)
         }
     }
     

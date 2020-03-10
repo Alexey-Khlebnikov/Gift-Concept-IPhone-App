@@ -11,7 +11,7 @@
         <!--Seller Bases Navigation Controller-->
         <scene sceneID="FfM-u0-v2D">
             <objects>
-                <navigationController storyboardIdentifier="SellerMainViewController" id="eZ7-FT-Irj" customClass="SellerBasesNavigationController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SellerMainViewController" id="eZ7-FT-Irj" customClass="SellerBasesNavigationController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="4I7-Tf-Xq1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,12 +28,12 @@
         <!--Seller Setting View Controller-->
         <scene sceneID="8hU-U9-AN0">
             <objects>
-                <viewController storyboardIdentifier="SellerSettingViewStoryboard" id="kg6-n7-seg" customClass="SellerSettingViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerSettingViewStoryboard" id="kg6-n7-seg" customClass="SellerSettingViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xHT-YD-ju5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afr-xj-2dI" userLabel="ContentView" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afr-xj-2dI" userLabel="ContentView" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO3-Jh-FyW">
@@ -42,10 +42,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9a-uW-n7P" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9a-uW-n7P" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="17" y="122" width="379.5" height="220"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHS-FO-o9q" customClass="CheckBoxListView" customModule="GIFT_APP" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHS-FO-o9q" customClass="CheckBoxListView" customModule="Gift_Concept" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="16" width="363.5" height="196"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -133,7 +133,7 @@
         <!--Seller Bases View Controller-->
         <scene sceneID="meN-dq-RvV">
             <objects>
-                <viewController id="7PS-c5-YY2" customClass="SellerBasesViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7PS-c5-YY2" customClass="SellerBasesViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HSQ-7J-ghE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,7 @@
         <!--Seller Category View Controller-->
         <scene sceneID="gEf-2L-WOo">
             <objects>
-                <viewController storyboardIdentifier="SellerCategoryViewController" id="fFk-r4-Cab" customClass="SellerCategoryViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerCategoryViewController" id="fFk-r4-Cab" customClass="SellerCategoryViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Slt-yv-ldG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,17 +186,17 @@
                                     <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="czl-GN-I6f" customClass="CategoryItemCell" customModule="GIFT_APP" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="czl-GN-I6f" customClass="CategoryItemCell" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="374" height="106"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Br3-q0-tWi" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Br3-q0-tWi" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="106"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="goV-s4-8LL" customClass="URLImageView" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="goV-s4-8LL" customClass="URLImageView" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="249" height="106"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -206,13 +206,13 @@
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="NO"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7I-CC-2wh" customClass="BezierView" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7I-CC-2wh" customClass="BezierView" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="184" y="0.0" width="190" height="106"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1a-JE-Yf5" userLabel="Detail Container">
                                                                     <rect key="frame" x="94" y="30" width="42" height="46"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9Z-tx-91G" customClass="URLImageView" customModule="GIFT_APP" customModuleProvider="target">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9Z-tx-91G" customClass="URLImageView" customModule="Gift_Concept" customModuleProvider="target">
                                                                             <rect key="frame" x="11" y="0.0" width="20" height="20"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="20" id="JSC-qU-9dk"/>
@@ -324,7 +324,7 @@
         <!--Seller Products View Controller-->
         <scene sceneID="uHF-Nv-NNc">
             <objects>
-                <viewController storyboardIdentifier="SellerProductsViewController" id="Jid-nA-UBg" customClass="SellerProductsViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerProductsViewController" id="Jid-nA-UBg" customClass="SellerProductsViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ig6-52-Tu9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,7 +339,7 @@
                                     <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerProductCell" id="QS2-AU-wUL" customClass="SellerProductCell" customModule="GIFT_APP" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerProductCell" id="QS2-AU-wUL" customClass="SellerProductCell" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="15" y="15" width="180" height="265"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -349,7 +349,7 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLT-hi-Oyg">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="265"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q8m-LT-zRm" customClass="URLImageView" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q8m-LT-zRm" customClass="URLImageView" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                             <color key="backgroundColor" red="0.92549019610000005" green="0.4823529412" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
@@ -373,7 +373,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45i-tn-GC7" customClass="RatingView" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45i-tn-GC7" customClass="RatingView" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="190" width="130" height="25"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -469,7 +469,7 @@
         <!--Seller Delivery Requests View Controller-->
         <scene sceneID="2a7-0e-K6p">
             <objects>
-                <viewController storyboardIdentifier="DeliveryRequestViewController" id="hF1-7m-Tr2" customClass="SellerDeliveryRequestsViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeliveryRequestViewController" id="hF1-7m-Tr2" customClass="SellerDeliveryRequestsViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZaZ-qg-Nm8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -484,26 +484,26 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerDeliveryRequestViewCell" id="HMB-5V-5VZ" customClass="SellerDeliveryRequestViewCell" customModule="GIFT_APP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerDeliveryRequestViewCell" id="HMB-5V-5VZ" customClass="SellerDeliveryRequestViewCell" customModule="Gift_Concept" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4L-vS-bPA" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4L-vS-bPA" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neb-Yf-BzB" customClass="AvatarImageView" customModule="GIFT_APP" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="20" width="50" height="52"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neb-Yf-BzB" customClass="AvatarImageView" customModule="Gift_Concept" customModuleProvider="target">
+                                                            <rect key="frame" x="20" y="20" width="50" height="50"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="dUM-dl-6Zf"/>
                                                                 <constraint firstAttribute="width" constant="50" id="w4f-zk-4it"/>
                                                             </constraints>
                                                         </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-Jc-fdw" customClass="BaseButton" customModule="GIFT_APP" customModuleProvider="target">
-                                                            <rect key="frame" x="324" y="31" width="70" height="30"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-Jc-fdw" customClass="BaseButton" customModule="Gift_Concept" customModuleProvider="target">
+                                                            <rect key="frame" x="324" y="30" width="70" height="30"/>
                                                             <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="iXf-FI-pjo"/>
@@ -525,77 +525,45 @@
                                                                     <size key="value" width="2" height="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="action_award:" destination="HMB-5V-5VZ" eventType="touchUpInside" id="3qA-XG-6i1"/>
+                                                            </connections>
                                                         </button>
-                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ym-7L-KSe" customClass="HCSStarRatingView">
-                                                            <rect key="frame" x="80" y="46" width="100" height="20"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20" id="dSz-dX-oWt"/>
-                                                                <constraint firstAttribute="width" constant="100" id="g3u-Hk-fwf"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="starBorderColor">
-                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                                    <integer key="value" value="5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                                    <real key="value" value="0.0"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                                    <real key="value" value="3.7000000000000002"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="spacing">
-                                                                    <real key="value" value="0.0"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyStarColor">
-                                                                    <color key="value" white="0.83121075909999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="YES"/>
-                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="accurateHalfStars" value="YES"/>
-                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="continuous" value="YES"/>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zct-OE-Vir" customClass="BaseLabel" customModule="GIFT_APP" customModuleProvider="target">
-                                                            <rect key="frame" x="183" y="45" width="34" height="22"/>
-                                                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="HE7-cH-ln4"/>
-                                                                <constraint firstAttribute="height" constant="22" id="abw-pI-9Dc"/>
-                                                                <constraint firstAttribute="width" constant="34" id="laC-1D-zEf"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deliverier name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-BJ-Bqf">
-                                                            <rect key="frame" x="80" y="23.5" width="113" height="19.5"/>
+                                                            <rect key="frame" x="80" y="22.5" width="113" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ev-lh-Uzo" customClass="RatingView" customModule="Gift_Concept" customModuleProvider="target">
+                                                            <rect key="frame" x="78" y="44" width="137" height="25"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="137" id="FDO-mc-3wY"/>
+                                                                <constraint firstAttribute="height" constant="25" id="hyb-x0-fsF"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="awarded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlg-eJ-JM9">
+                                                            <rect key="frame" x="328" y="34.5" width="66" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="neb-Yf-BzB" secondAttribute="bottom" constant="20" id="0s0-te-e3m"/>
+                                                        <constraint firstItem="7ev-lh-Uzo" firstAttribute="leading" secondItem="cAg-BJ-Bqf" secondAttribute="leading" constant="-2" id="99w-de-ecf"/>
                                                         <constraint firstItem="cAg-BJ-Bqf" firstAttribute="bottom" secondItem="neb-Yf-BzB" secondAttribute="centerY" constant="-3" id="CCu-bi-f4F"/>
                                                         <constraint firstAttribute="width" priority="999" constant="414" id="Cvp-X6-FF1"/>
+                                                        <constraint firstItem="tlg-eJ-JM9" firstAttribute="centerY" secondItem="K4L-vS-bPA" secondAttribute="centerY" id="E58-w6-tdH"/>
                                                         <constraint firstItem="cAg-BJ-Bqf" firstAttribute="leading" secondItem="neb-Yf-BzB" secondAttribute="trailing" constant="10" id="Hcc-x4-aIh"/>
+                                                        <constraint firstItem="7ev-lh-Uzo" firstAttribute="top" secondItem="cAg-BJ-Bqf" secondAttribute="bottom" constant="2" id="Jqn-8f-cdK"/>
                                                         <constraint firstItem="neb-Yf-BzB" firstAttribute="leading" secondItem="K4L-vS-bPA" secondAttribute="leading" constant="20" id="Ndb-Kr-Pqu"/>
-                                                        <constraint firstItem="Zct-OE-Vir" firstAttribute="centerY" secondItem="0ym-7L-KSe" secondAttribute="centerY" id="Qk9-TC-sBy"/>
                                                         <constraint firstItem="qfZ-Jc-fdw" firstAttribute="centerY" secondItem="neb-Yf-BzB" secondAttribute="centerY" id="R54-s7-jAv"/>
-                                                        <constraint firstItem="0ym-7L-KSe" firstAttribute="leading" secondItem="cAg-BJ-Bqf" secondAttribute="leading" id="Wab-BC-16P"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tlg-eJ-JM9" secondAttribute="trailing" constant="20" id="fdR-yx-Jzr"/>
                                                         <constraint firstItem="neb-Yf-BzB" firstAttribute="top" secondItem="K4L-vS-bPA" secondAttribute="top" constant="20" id="hdh-Dv-amd"/>
-                                                        <constraint firstItem="Zct-OE-Vir" firstAttribute="leading" secondItem="0ym-7L-KSe" secondAttribute="trailing" constant="3" id="ra0-l1-DTf"/>
                                                         <constraint firstAttribute="trailing" secondItem="qfZ-Jc-fdw" secondAttribute="trailing" constant="20" id="rry-Ut-NpO"/>
-                                                        <constraint firstItem="0ym-7L-KSe" firstAttribute="top" secondItem="neb-Yf-BzB" secondAttribute="centerY" id="xDV-wj-8rc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="neb-Yf-BzB" secondAttribute="bottom" constant="20" id="tSX-tk-7ej"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -614,10 +582,14 @@
                                             <constraint firstItem="K4L-vS-bPA" firstAttribute="leading" secondItem="HMB-5V-5VZ" secondAttribute="leading" id="lxw-9B-ZBs"/>
                                             <constraint firstAttribute="bottom" secondItem="K4L-vS-bPA" secondAttribute="bottom" id="t7w-kK-0Hc"/>
                                         </constraints>
-                                        <size key="customSize" width="414" height="92"/>
+                                        <size key="customSize" width="414" height="90"/>
                                         <connections>
                                             <outlet property="aiv_avatar" destination="neb-Yf-BzB" id="iec-ci-rk4"/>
+                                            <outlet property="btn_award" destination="qfZ-Jc-fdw" id="TP4-Is-Keb"/>
+                                            <outlet property="lbl_deliverierName" destination="cAg-BJ-Bqf" id="Ntq-1W-r9O"/>
+                                            <outlet property="lbl_state" destination="tlg-eJ-JM9" id="pZ1-Rk-aEO"/>
                                             <outlet property="maxWidthConstraint" destination="Cvp-X6-FF1" id="7Nn-Kd-gcd"/>
+                                            <outlet property="ratingView" destination="7ev-lh-Uzo" id="JkK-J5-XcQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -644,7 +616,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOK-xL-NPj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1512" y="-1298"/>
+            <point key="canvasLocation" x="1511.5942028985507" y="-1298.4375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RWx-p1-bo4">
@@ -679,7 +651,7 @@
         <!--Seller Requests View Controller-->
         <scene sceneID="pth-hW-pur">
             <objects>
-                <viewController storyboardIdentifier="SellerRequestsViewController" id="8mV-76-oQo" customClass="SellerRequestsViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerRequestsViewController" id="8mV-76-oQo" customClass="SellerRequestsViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aPR-Na-G9O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -717,7 +689,7 @@
         <!--Seller Buy Requests View Controller-->
         <scene sceneID="J83-Xe-AYo">
             <objects>
-                <viewController storyboardIdentifier="SellerBuyRequestsViewController" id="YuP-em-kOa" customClass="SellerBuyRequestsViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerBuyRequestsViewController" id="YuP-em-kOa" customClass="SellerBuyRequestsViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J9a-11-hYR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -732,14 +704,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerBuyRequestsViewCell" id="uQp-de-6WB" customClass="SellerBuyRequestsViewCell" customModule="GIFT_APP" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerBuyRequestsViewCell" id="uQp-de-6WB" customClass="SellerBuyRequestsViewCell" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q1i-MF-8zC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dF5-gU-xdo" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dF5-gU-xdo" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I need a small watch" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R6-aE-lwd">
@@ -784,7 +756,7 @@ I just wanted you know what I’m doing now to </string>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBt-Ia-HR8" customClass="BaseButton" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBt-Ia-HR8" customClass="BaseButton" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="154" width="94" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -820,7 +792,7 @@ I just wanted you know what I’m doing now to </string>
                                                                 <action selector="goToViewDetail:" destination="uQp-de-6WB" eventType="touchUpInside" id="oip-BQ-jck"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXU-ix-rHY" customClass="BaseButton" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXU-ix-rHY" customClass="BaseButton" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="306" y="154" width="88" height="30"/>
                                                             <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
@@ -936,7 +908,7 @@ I just wanted you know what I’m doing now to </string>
         <!--Seller Orders Container View Controller-->
         <scene sceneID="5Pv-qT-7T7">
             <objects>
-                <viewController id="9oM-71-rNe" customClass="SellerOrdersContainerViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9oM-71-rNe" customClass="SellerOrdersContainerViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2L2-kp-WVS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -975,7 +947,7 @@ I just wanted you know what I’m doing now to </string>
         <!--Seller Bid Detail View Controller-->
         <scene sceneID="e45-RF-etK">
             <objects>
-                <viewController storyboardIdentifier="SellerBidDetailViewController" id="BKt-Ms-4xM" customClass="SellerBidDetailViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerBidDetailViewController" id="BKt-Ms-4xM" customClass="SellerBidDetailViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4yy-Nq-Kw0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -986,7 +958,7 @@ I just wanted you know what I’m doing now to </string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-Mf-3s4">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="268"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgK-yF-Dbv" customClass="ProductThumbImageView" customModule="GIFT_APP" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgK-yF-Dbv" customClass="ProductThumbImageView" customModule="Gift_Concept" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="21" width="90" height="90"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -1036,7 +1008,7 @@ I just wanted you know what I’m doing now to </string>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3a-PD-n3M" customClass="RatingView" customModule="GIFT_APP" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3a-PD-n3M" customClass="RatingView" customModule="Gift_Concept" customModuleProvider="target">
                                                 <rect key="frame" x="124" y="56" width="120" height="20"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -1050,7 +1022,7 @@ I just wanted you know what I’m doing now to </string>
                                                 <color key="textColor" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-H8-gVS" customClass="BaseButton" customModule="GIFT_APP" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-H8-gVS" customClass="BaseButton" customModule="Gift_Concept" customModuleProvider="target">
                                                 <rect key="frame" x="306" y="218" width="88" height="30"/>
                                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -1144,7 +1116,7 @@ I just wanted you know what I’m doing now to </string>
         <!--Seller Buy Order Detail View Controller-->
         <scene sceneID="jMf-M9-DgH">
             <objects>
-                <viewController storyboardIdentifier="SellerBuyOrderDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="DL3-cP-yMp" customClass="SellerBuyOrderDetailViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerBuyOrderDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="DL3-cP-yMp" customClass="SellerBuyOrderDetailViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="ZOD-Wo-osa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1187,7 +1159,7 @@ I just wanted you know what I’m doing now to </string>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AttachImageCell" id="TOs-6Q-wSB" customClass="AttachImageCell" customModule="GIFT_APP" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AttachImageCell" id="TOs-6Q-wSB" customClass="AttachImageCell" customModule="Gift_Concept" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="88"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1201,7 +1173,7 @@ I just wanted you know what I’m doing now to </string>
                                                                         <constraint firstAttribute="width" constant="374" id="7gI-Wc-RS4"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gea-PW-NOM" customClass="ProductThumbImageView" customModule="GIFT_APP" customModuleProvider="target">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gea-PW-NOM" customClass="ProductThumbImageView" customModule="Gift_Concept" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="88"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                     <constraints>
@@ -1321,7 +1293,7 @@ I just wanted you know what I’m doing now to </string>
                                                 <color key="textColor" red="0.90196078430000004" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1M-zJ-FRK" customClass="BaseButton" customModule="GIFT_APP" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1M-zJ-FRK" customClass="BaseButton" customModule="Gift_Concept" customModuleProvider="target">
                                                 <rect key="frame" x="92" y="419" width="26" height="26"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1442,7 +1414,7 @@ I just wanted you know what I’m doing now to </string>
         <!--Seller Post Requsets View Controller-->
         <scene sceneID="5ti-Au-UQk">
             <objects>
-                <viewController storyboardIdentifier="SellerPostRequsetsViewController" id="uvu-wo-Hwk" customClass="SellerPostRequsetsViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerPostRequsetsViewController" id="uvu-wo-Hwk" customClass="SellerPostRequsetsViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FDT-cr-CCM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1450,7 +1422,7 @@ I just wanted you know what I’m doing now to </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfV-ts-lNF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y05-vy-kaW" customClass="BaseButton" customModule="GIFT_APP" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y05-vy-kaW" customClass="BaseButton" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="3" y="3" width="408" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="View 3 new posts">
@@ -1497,14 +1469,14 @@ I just wanted you know what I’m doing now to </string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerPostViewCell" id="IdI-Ut-3nt" customClass="SellerPostViewCell" customModule="GIFT_APP" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerPostViewCell" id="IdI-Ut-3nt" customClass="SellerPostViewCell" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="0.5" y="0.0" width="413" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="413" height="185"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-jT-wIi" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-jT-wIi" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="395.5" height="185"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I need a small watch" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s2-DV-Jhg">
@@ -1549,7 +1521,7 @@ I just wanted you know what I’m doing now to </string>
                                                             <color key="textColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFe-aW-cfz" userLabel="Heart" customClass="BaseButton" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFe-aW-cfz" userLabel="Heart" customClass="BaseButton" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="339.5" y="22.5" width="36" height="36"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -1579,7 +1551,7 @@ I just wanted you know what I’m doing now to </string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdB-WY-j3R" userLabel="Veto" customClass="BaseButton" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdB-WY-j3R" userLabel="Veto" customClass="BaseButton" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="292.5" y="22.5" width="36" height="36"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -1693,7 +1665,7 @@ I just wanted you know what I’m doing now to </string>
         <!--Seller Post Detail View Controller-->
         <scene sceneID="PNi-3g-sAY">
             <objects>
-                <viewController storyboardIdentifier="SellerPostDetailViewController" id="vSM-kP-hVW" customClass="SellerPostDetailViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellerPostDetailViewController" id="vSM-kP-hVW" customClass="SellerPostDetailViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lqf-VT-h7b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1770,10 +1742,10 @@ I just wanted you know what I’m doing now to </string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utp-b1-D6k" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utp-b1-D6k" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                             <rect key="frame" x="20" y="62" width="374" height="90"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bM3-xn-FEu" customClass="URLImageView" customModule="GIFT_APP" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bM3-xn-FEu" customClass="URLImageView" customModule="Gift_Concept" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="7gH-zU-fF3"/>
@@ -1821,7 +1793,7 @@ I just wanted you know what I’m doing now to </string>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-os-yUu" customClass="BaseLabel" customModule="GIFT_APP" customModuleProvider="target">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-os-yUu" customClass="BaseLabel" customModule="Gift_Concept" customModuleProvider="target">
                                                     <rect key="frame" x="203" y="35.5" width="34" height="22"/>
                                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -1903,7 +1875,7 @@ I just wanted you know what I’m doing now to </string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bid Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zgc-fy-rbT" customClass="BaseTextField" customModule="GIFT_APP" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bid Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zgc-fy-rbT" customClass="BaseTextField" customModule="Gift_Concept" customModuleProvider="target">
                                             <rect key="frame" x="67" y="172" width="140" height="48"/>
                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -1989,14 +1961,14 @@ I just wanted you know what I’m doing now to </string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttacheTableViewCell" id="zUN-Hm-pAD" customClass="AttacheTableViewCell" customModule="GIFT_APP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttacheTableViewCell" id="zUN-Hm-pAD" customClass="AttacheTableViewCell" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="131" width="414" height="132.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zUN-Hm-pAD" id="bCr-Ab-kaE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="132.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AKd-vg-T9q" customClass="URLImageView" customModule="GIFT_APP" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AKd-vg-T9q" customClass="URLImageView" customModule="Gift_Concept" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="21" width="90.5" height="90.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="AKd-vg-T9q" secondAttribute="height" multiplier="1:1" id="GeC-bW-RKv"/>
@@ -2006,13 +1978,13 @@ I just wanted you know what I’m doing now to </string>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSU-Lq-HMy">
                                                     <rect key="frame" x="124" y="45" width="270" height="43"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The sample image1 for small watch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vL-8X-Uk1">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The sample image1 for small watch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vL-8X-Uk1">
                                                             <rect key="frame" x="0.0" y="0.0" width="270" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Added 3 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0B-no-VZp">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Added 3 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0B-no-VZp">
                                                             <rect key="frame" x="0.0" y="26" width="270" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2091,12 +2063,12 @@ I just wanted you know what I’m doing now to </string>
         <!--Seller Product List View Controller-->
         <scene sceneID="naj-ff-Lj5">
             <objects>
-                <viewController id="cRD-ri-bhi" customClass="SellerProductListViewController" customModule="GIFT_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cRD-ri-bhi" customClass="SellerProductListViewController" customModule="Gift_Concept" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V7C-yt-Y9E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-6b-JKJ" customClass="BaseCollectionView" customModule="GIFT_APP" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-6b-JKJ" customClass="BaseCollectionView" customModule="Gift_Concept" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="133" width="414" height="661"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="40" maxX="0.0" maxY="10"/>
@@ -2107,20 +2079,20 @@ I just wanted you know what I’m doing now to </string>
                                     <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="30"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerProductListViewItemCell" id="gKI-t6-DqF" customClass="SellerProductListViewItemCell" customModule="GIFT_APP" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SellerProductListViewItemCell" id="gKI-t6-DqF" customClass="SellerProductListViewItemCell" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="374" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgA-kw-Tem" userLabel="Cover View" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgA-kw-Tem" userLabel="Cover View" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="93"/>
                                                     <subviews>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwE-17-MzE" userLabel="Background View" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwE-17-MzE" userLabel="Background View" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="93"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t1q-wF-0ma" customClass="URLImageView" customModule="GIFT_APP" customModuleProvider="target">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t1q-wF-0ma" customClass="URLImageView" customModule="Gift_Concept" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="93"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
@@ -2169,7 +2141,7 @@ I just wanted you know what I’m doing now to </string>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwt-Ik-IRX" customClass="BaseLabel" customModule="GIFT_APP" customModuleProvider="target">
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwt-Ik-IRX" customClass="BaseLabel" customModule="Gift_Concept" customModuleProvider="target">
                                                                     <rect key="frame" x="208" y="37" width="34" height="22"/>
                                                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
@@ -2283,7 +2255,7 @@ I just wanted you know what I’m doing now to </string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yO9-at-4is" customClass="BaseTextField" customModule="GIFT_APP" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yO9-at-4is" customClass="BaseTextField" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="20" y="47" width="374" height="40"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -2322,10 +2294,10 @@ I just wanted you know what I’m doing now to </string>
                                     <constraint firstAttribute="height" constant="89" id="qT2-pf-zPR"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-uS-LTy" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOu-uS-LTy" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="774" width="414" height="122"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oz8-cP-BR7" customClass="MyBaseView" customModule="GIFT_APP" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oz8-cP-BR7" customClass="MyBaseView" customModule="Gift_Concept" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMA-iI-Ii3" customClass="MDCFloatingButton">

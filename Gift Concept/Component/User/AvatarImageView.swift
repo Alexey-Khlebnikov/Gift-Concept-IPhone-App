@@ -37,8 +37,12 @@ class AvatarImageView: MyBaseView {
         addSubview(borderView)
     }
     
-    func fromURL(urlString: String) {
-        avatar.fromURL(urlString: endPoint + urlString)
+    func fromURL(urlString: String?) {
+        guard let _url = urlString else {
+            return
+        }
+        print(endPoint + _url)
+        avatar.fromURL(urlString: endPoint + _url)
     }
     
     override func draw(_ rect: CGRect) {

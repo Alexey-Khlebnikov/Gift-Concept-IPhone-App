@@ -11,6 +11,11 @@ import MaterialComponents
 
 class SellerOrdersContainerViewController: CollectionStoryboardViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    var bidData: BidData! {
+        didSet {
+            postId = self.bidData.postId
+        }
+    }
     
     var postId: String!
     
@@ -113,6 +118,6 @@ extension SellerOrdersContainerViewController: CollectionStoryboardViewDelegate 
     }
     
     func senderList() -> [Any?] {
-        return [postId, postId, postId]
+        return [postId, postId, bidData.id]
     }
 }

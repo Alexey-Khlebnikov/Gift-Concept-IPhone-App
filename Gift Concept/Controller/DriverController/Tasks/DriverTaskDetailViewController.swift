@@ -159,8 +159,8 @@ class DriverTaskDetailViewController: BaseViewController {
     }
     
     @IBAction func action_accept(_ sender: Any) {
-        deliveryData.accept {
-            print("accept action")
+        deliveryData.accept { (response) in
+            
         }
     }
     

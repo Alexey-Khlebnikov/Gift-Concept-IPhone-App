@@ -16,6 +16,7 @@ class DeliveryData: SafeJsonObject {
     var deliveryPrice: Float = 0
     var priceUnit: PriceUnit!
     var deliverierIds: [String] = []
+    var deliveriers: [User] = []
     var awardedDeliverierIds: [String] = []
     var deliveryId: String!
     
@@ -36,19 +37,46 @@ class DeliveryData: SafeJsonObject {
         }
     }
     
-    public func accept(complete: @escaping () -> ()) {
-        GiftHttp.sharedApi.Post("/bid/acceptDelivery/" + bidId, data: [:]) { (response) in
-            
+    public func award(deliverierId: String, complete: @escaping (GiftResponse) -> ()) {
+        GiftHttp.sharedApi.Post("/bid/awardDelivery", data: [
+            "bidId": bidId!,
+            "deliverierId": deliverierId
+        ]) { (response) in
+            complete(response)
         }
     }
     
-    public static func getList(complete: @escaping ([DeliveryData]) -> ()) {
-        GiftHttp.sharedApi.Get("/bid/deliveryRequests") { (response) in
+    public func accept(complete: @escaping (GiftResponse) -> ()) {
+        GiftHttp.sharedApi.Post("/bid/acceptDelivery/" + bidId, data: [:]) { (response) in
+            complete(response)
+        }
+    }
+    
+    public static func getAlldeliveryRequests(complete: @escaping ([DeliveryData]) -> ()) {
+        GiftHttp.sharedApi.Get("/bid/getAllDeliveryRequests") { (response) in
             if response.error != nil {
                 complete([])
             } else {
                 let data = response.data as! [[String: AnyObject]]
                 complete(data.map({return DeliveryData($0)}))
+            }
+        }
+    }
+    
+    public static func getDeliveryDataForSeller(bidId: String, complete: @escaping (DeliveryData) -> ()) {
+        GiftHttp.sharedApi.Get("/bid/getDeliveryDataForSeller/\(bidId)") { (response) in
+            if response.error == nil {
+                let data = response.data as! [String: AnyObject]
+                complete(DeliveryData(data))
+            }
+        }
+    }
+    
+    public static func getData(bidId: String, complete: @escaping (DeliveryData) -> ()) {
+        GiftHttp.sharedApi.Get("/bid/getDeliveryRequest/\(bidId)") { (response) in
+            if response.error == nil {
+                let deliveryData = DeliveryData(response.data as! [String: AnyObject])
+                complete(deliveryData)
             }
         }
     }
@@ -59,6 +87,9 @@ class DeliveryData: SafeJsonObject {
         case "priceUnit":
             self.priceUnit = PriceUnit(value as! [String: AnyObject])
             break
+        case "deliveriers":
+            let dic = value as! [[String: AnyObject]]
+            self.deliveriers = dic.map({return User($0)})
         default:
             super.setValue(value, forKey: key)
         }
