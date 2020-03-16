@@ -73,7 +73,6 @@ public class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     override public func viewDidLoad() {
         super.viewDidLoad()
         viewDidLoadDelegate?.viewDidLoad(self)
-        setupSocket()
     }
     
     func setupSocket() {

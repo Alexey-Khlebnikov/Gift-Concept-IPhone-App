@@ -126,14 +126,39 @@ class DriverTaskDetailViewController: BaseViewController {
     }
     
     override func setupSocket() {
-        super.setupSocket()
-        SocketIOApi.shared.socket.on("bidDelivery") { (arguments, arc) in
+        socketEventIds.append(SocketIOApi.shared.socket.on("bidDelivery") { (arguments, arc) in
             guard let data = arguments[0] as? [String: String] else {
                 return
             }
-            self.deliveryData.deliverierIds.append(data["deliveryId"]!)
-            self.setupControlBtns()
-        }
+            let bidId = data["bidId"]!
+            let deliveryId = data["deliveryId"]!
+            if self.deliveryData.bidId == bidId {
+                self.deliveryData.deliverierIds.append(deliveryId)
+                self.setupControlBtns()
+            }
+        })
+        socketEventIds.append(SocketIOApi.shared.socket.on("awardDelivery", callback: { (arguments, arc) in
+            guard let data = arguments[0] as? [String: String] else {
+            return
+            }
+            let bidId = data["bidId"]!
+            let deliverierId = data["deliverierId"]!
+            if self.deliveryData.bidId == bidId {
+                self.deliveryData.awardedDeliverierIds.append(deliverierId)
+                self.setupControlBtns()
+            }
+        }))
+        socketEventIds.append(SocketIOApi.shared.socket.on("acceptDelivery", callback: { (arguments, arc) in
+            guard let data = arguments[0] as? [String: String] else {
+                return
+            }
+            let bidId = data["bidId"]!
+            let deliveryId = data["deliveryId"]!
+            if self.deliveryData.bidId == bidId {
+                self.deliveryData.deliveryId = deliveryId
+                self.setupControlBtns()
+            }
+        }))
     }
 
     override func viewDidLoad() {

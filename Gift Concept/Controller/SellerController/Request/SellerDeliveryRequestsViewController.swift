@@ -9,21 +9,8 @@
 import UIKit
 
 class SellerDeliveryRequestsViewController: BaseViewController {
-    var deliveryDataList: [DeliveryData] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
-    var deliveryData: DeliveryData? {
-        didSet {
-            renderData()
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
+    
+    var deliveryData: DeliveryData?
     
     var deliveriers: [(deliverier: User, state: DeliveryState)] = []
     
@@ -39,13 +26,20 @@ class SellerDeliveryRequestsViewController: BaseViewController {
                 dic.removeValue(forKey: deliveryData.deliveryId)
             }
             for deliverierId in deliveryData.awardedDeliverierIds {
-                self.deliveriers.append((dic[deliverierId]!, .awarded))
-                dic.removeValue(forKey: deliverierId)
+                if deliverierId != deliveryData.deliveryId {
+                    self.deliveriers.append((dic[deliverierId]!, .awarded))
+                    dic.removeValue(forKey: deliverierId)
+                }
             }
-            for (_, deliverier) in dic {
-                self.deliveriers.append((deliverier, .bidded))
+            for (deliverierId, deliverier) in dic {
+                if self.deliveryData?.awardedDeliverierIds.first(where: { (id) -> Bool in
+                    return deliverierId == id
+                }) == nil {
+                    self.deliveriers.append((deliverier, .bidded))
+                }
             }
         }
+        print(deliveriers.count)
     }
     
     
@@ -57,7 +51,7 @@ class SellerDeliveryRequestsViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+        super.viewWillAppear(animated)
         loadData()
     }
     
@@ -65,21 +59,65 @@ class SellerDeliveryRequestsViewController: BaseViewController {
         if let bidId = sender as? String {
             DeliveryData.getDeliveryDataForSeller(bidId: bidId) { (deliveryData) in
                 self.deliveryData = deliveryData
+                self.renderData()
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }
     
     override func setupSocket() {
-        socketEventIds.append(SocketIOApi.shared.socket.on("", callback: { (arguments, arc) in
+        socketEventIds.append(SocketIOApi.shared.socket.on("bidDelivery", callback: { (arguments, arc) in
             guard let data = arguments[0] as? [String: String] else {
                 return
             }
-//            DeliveryData.getData(bidId: data["bidId"]!) { (deliveryData) in
-//                self.deliveryDataList.append(deliveryData)
-//            }
+            let bidId = data["bidId"]!
+            let deliverierId = data["deliveryId"]!
+            if self.deliveryData?.bidId == bidId {
+                self.deliveryData?.getDeliverier(deliveryId: deliverierId, complete: { (user) in
+                    self.deliveryData?.deliveriers.append(user)
+                    self.deliveryData?.deliverierIds.append(deliverierId)
+
+                    self.renderData()
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
+                })
+            }
+        }))
+        socketEventIds.append(SocketIOApi.shared.socket.on("awardDelivery", callback: { (arguments, arc) in
+            
+            guard let data = arguments[0] as? [String: String] else {
+                return
+            }
+            let bidId = data["bidId"]!
+            let deliverierId = data["deliverierId"]!
+            if self.deliveryData?.bidId == bidId {
+                print("award deliverier: \(deliverierId)")
+                self.deliveryData?.awardedDeliverierIds.append(deliverierId)
+                self.renderData()
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }))
+        socketEventIds.append(SocketIOApi.shared.socket.on("acceptDelivery", callback: { (arguments, arc) in
+            guard let data = arguments[0] as? [String: String] else {
+                return
+            }
+            let bidId = data["bidId"]!
+            let deliveryId = data["deliveryId"]!
+            if self.deliveryData?.bidId == bidId {
+                print("accept deliverier: \(deliveryId)")
+                self.deliveryData?.deliveryId = deliveryId
+                self.renderData()
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
         }))
     }
-
     /*
     // MARK: - Navigation
 

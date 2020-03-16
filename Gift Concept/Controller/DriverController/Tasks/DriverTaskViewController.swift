@@ -27,25 +27,53 @@ class DriverTaskViewController: BaseViewController {
     }
     
     override func setupSocket() {
-        super.setupSocket()
-        SocketIOApi.shared.socket.on("bidDelivery") { (arguments, arc) in
+        socketEventIds.append(SocketIOApi.shared.socket.on("awardDelivery", callback: { (arguments, arc) in
+            
             guard let data = arguments[0] as? [String: String] else {
                 return
             }
-//            self.deliveryData.deliverierIds.append(data["deliveryId"]!)
-//            self.setupControlBtns()
-        }
+            let bidId = data["bidId"]!
+            let deliverierId = data["deliverierId"]!
+            if deliverierId == User.Me.id {
+                DeliveryData.getDeliveryDataForSeller(bidId: bidId) { (deliveryData) in
+                    self.tasks.append(deliveryData)
+                    DispatchQueue.main.async {
+                        self.collectoinView.reloadData()
+                    }
+                }
+            }
+        }))
+        socketEventIds.append(SocketIOApi.shared.socket.on("acceptDelivery") { (arguments, arc) in
+            guard let data = arguments[0] as? [String: String] else {
+                return
+            }
+            let bidId = data["bidId"]!
+            let deliveryId = data["deliveryId"]!
+            var i = 0
+            var deliveryData: DeliveryData?
+            for task in self.tasks {
+                if task.bidId == bidId {
+                    deliveryData = task
+                    break
+                }
+                i = i + 1
+            }
+            if deliveryData != nil {
+                let cell = self.collectoinView.cellForItem(at: IndexPath(item: i, section: 0)) as! DriverTaskCell
+                deliveryData?.deliveryId = deliveryId
+                cell.deliveryData = deliveryData
+                cell.refreshCell()
+            }
+        })
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadData()
-        print("DriverTaskViewController viewDidLoad")
-        // Do any additional setup after loading the view.
     }
     
     func loadData() {
-        DeliveryData.getAlldeliveryRequests { (list) in
+        DeliveryData.getMyDeliveryTasks { (list) in
             self.tasks = list
         }
     }
@@ -81,13 +109,26 @@ extension DriverTaskViewController: UICollectionViewDataSource, UICollectionView
 class DriverTaskCell: AutoHeightCollectionViewCell {
     var deliveryData: DeliveryData? {
         didSet {
-            if let imageId = self.deliveryData?.productImageId {
-                iv_productImage.fromImageId(imageId: imageId)
-            }
-            lbl_productName.text = self.deliveryData?.productName
-            lbl_sellerPosition.text = self.deliveryData?.from
-            lbl_buyerPosition.text = self.deliveryData?.to
-            lbl_deliveryPrice.text = self.deliveryData?.deliveryPriceString
+            refreshCell()
+        }
+    }
+    func refreshCell() {
+        if let imageId = self.deliveryData?.productImageId {
+            iv_productImage.fromImageId(imageId: imageId)
+        }
+        lbl_productName.text = self.deliveryData?.productName
+        lbl_sellerPosition.text = self.deliveryData?.from
+        lbl_buyerPosition.text = self.deliveryData?.to
+        lbl_deliveryPrice.text = self.deliveryData?.deliveryPriceString
+        if deliveryData?.deliveryId == User.Me.id {
+            lbl_status.isHidden = false
+            lbl_status.text = "Accepted"
+            btn_accept.isHidden = true
+            btn_revoke.isHidden = true
+        } else {
+            lbl_status.isHidden = true
+            btn_accept.isHidden = false
+            btn_revoke.isHidden = false
         }
     }
     override var isHighlighted: Bool {
@@ -106,9 +147,15 @@ class DriverTaskCell: AutoHeightCollectionViewCell {
     @IBOutlet weak var lbl_sellerPosition: UILabel!
     @IBOutlet weak var lbl_buyerPosition: UILabel!
     @IBOutlet weak var lbl_deliveryPrice: UILabel!
+    @IBOutlet weak var btn_accept: UIButton!
+    @IBOutlet weak var btn_revoke: BaseButton!
+    @IBOutlet weak var lbl_status: UILabel!
     
     @IBAction func action_revoke(_ sender: Any) {
     }
     @IBAction func action_accept(_ sender: Any) {
+        deliveryData?.accept { (response) in
+            
+        }
     }
 }

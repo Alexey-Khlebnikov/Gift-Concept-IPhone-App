@@ -31,6 +31,17 @@ class DeliveryData: SafeJsonObject {
         }
     }
     
+    public static func getMyDeliveryTasks(complete: @escaping ([DeliveryData]) -> ()) {
+        GiftHttp.sharedApi.Post("/bid/getMyDeliveryTasks", data: [:]) { (response) in
+            if response.error != nil {
+                complete([])
+            } else {
+                let dic = response.data as! [[String: AnyObject]]
+                complete(dic.map({return DeliveryData($0)}))
+            }
+        }
+    }
+    
     public func bidNow(complete: @escaping (GiftResponse) -> ()) {
         GiftHttp.sharedApi.Post("/bid/bidDelivery/" + self.bidId, data: [:]) { (response) in
             complete(response)
@@ -49,6 +60,18 @@ class DeliveryData: SafeJsonObject {
     public func accept(complete: @escaping (GiftResponse) -> ()) {
         GiftHttp.sharedApi.Post("/bid/acceptDelivery/" + bidId, data: [:]) { (response) in
             complete(response)
+        }
+    }
+    
+    public func getDeliverier(deliveryId: String, complete: @escaping (User) -> ()) {
+        GiftHttp.sharedApi.Post("/bid/getDeliverier", data: [
+            "bidId": bidId!,
+            "deliverierId": deliveryId
+        ]) { (response) in
+            if response.error == nil {
+                let data = response.data as! [String: AnyObject]
+                complete(User(data))
+            }
         }
     }
     

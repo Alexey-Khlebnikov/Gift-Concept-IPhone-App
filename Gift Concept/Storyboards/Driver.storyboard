@@ -615,10 +615,17 @@
                                                                 <action selector="action_revoke:" destination="W90-WK-X05" eventType="touchUpInside" id="PbL-bD-tq4"/>
                                                             </connections>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accepted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbc-mg-P40">
+                                                            <rect key="frame" x="329.5" y="118" width="64.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="qF3-7e-t8c" firstAttribute="leading" secondItem="gkg-CU-P3M" secondAttribute="leading" id="0Fs-vh-nyG"/>
+                                                        <constraint firstItem="Cbc-mg-P40" firstAttribute="centerY" secondItem="BB8-T4-Cx6" secondAttribute="centerY" id="14l-cy-vO5"/>
                                                         <constraint firstItem="W4L-4S-S11" firstAttribute="top" secondItem="qF3-7e-t8c" secondAttribute="bottom" constant="2" id="1Ov-N4-BT2"/>
                                                         <constraint firstItem="BB8-T4-Cx6" firstAttribute="centerY" secondItem="hV8-U5-jFg" secondAttribute="centerY" id="2zB-Vn-1JB"/>
                                                         <constraint firstItem="hV8-U5-jFg" firstAttribute="leading" secondItem="BB8-T4-Cx6" secondAttribute="trailing" constant="15" id="3PH-uI-DtM"/>
@@ -628,6 +635,7 @@
                                                         <constraint firstItem="BB8-T4-Cx6" firstAttribute="top" secondItem="rVd-MB-oiD" secondAttribute="bottom" constant="5" id="Fv9-Ve-uN7"/>
                                                         <constraint firstItem="J07-Rg-BQb" firstAttribute="top" secondItem="W4L-4S-S11" secondAttribute="bottom" constant="2" id="I42-Bm-hFJ"/>
                                                         <constraint firstItem="WTy-nb-yf0" firstAttribute="centerY" secondItem="W4L-4S-S11" secondAttribute="centerY" id="KUW-Qm-owA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Cbc-mg-P40" secondAttribute="trailing" constant="20" id="LFH-YL-JYg"/>
                                                         <constraint firstAttribute="trailing" secondItem="hV8-U5-jFg" secondAttribute="trailing" constant="20" id="Mn9-cf-pjZ"/>
                                                         <constraint firstAttribute="trailing" secondItem="gkg-CU-P3M" secondAttribute="trailing" constant="20" id="R8r-Kp-hgy"/>
                                                         <constraint firstItem="vjt-dB-vw0" firstAttribute="centerY" secondItem="rZ6-nw-aJb" secondAttribute="centerY" id="VyH-8Y-vMm"/>
@@ -663,11 +671,14 @@
                                         </constraints>
                                         <size key="customSize" width="414" height="157"/>
                                         <connections>
+                                            <outlet property="btn_accept" destination="hV8-U5-jFg" id="9Im-li-ZPK"/>
+                                            <outlet property="btn_revoke" destination="BB8-T4-Cx6" id="tYn-bw-0uv"/>
                                             <outlet property="iv_productImage" destination="vjt-dB-vw0" id="GXF-Os-sUd"/>
                                             <outlet property="lbl_buyerPosition" destination="WTy-nb-yf0" id="5wF-1E-FaM"/>
                                             <outlet property="lbl_deliveryPrice" destination="rVd-MB-oiD" id="0N2-Jh-k4W"/>
                                             <outlet property="lbl_productName" destination="gkg-CU-P3M" id="ier-XL-gTf"/>
                                             <outlet property="lbl_sellerPosition" destination="qvz-3l-XPd" id="rb4-JH-q5q"/>
+                                            <outlet property="lbl_status" destination="Cbc-mg-P40" id="LRp-es-gTd"/>
                                             <outlet property="maxWidthConstraint" destination="xJx-Lz-UVd" id="uHA-Rc-bD9"/>
                                         </connections>
                                     </collectionViewCell>
@@ -1291,6 +1302,6 @@
         <image name="suit.heart.fill" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aoq-q3-abX"/>
+        <segue reference="Zd1-bw-Bqt"/>
     </inferredMetricsTieBreakers>
 </document>
